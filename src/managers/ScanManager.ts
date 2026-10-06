@@ -44,3 +44,48 @@ export class ScanManager {
     this.maxMagneticField = 0;
     this.maxDeviation = 0;
     this.highestRiskLevel = RiskLevel.SAFE;
+    this.anomalyCount = 0;
+    this.mapData = [];
+
+    SignalProcessingEngine.reset();
+    const settings = SettingsManager.getSettings();
+
+    const onUpdate = (vector: Vector3) => {
+      if (!this.isScanning) return;
+
+      const magnitude = SignalProcessingEngine.calculateMagnitude(vector);
+      const smoothed = SignalProcessingEngine.process(magnitude);
+      const deviation = SignalProcessingEngine.getDeviation(smoothed, this.baseline);
+      const risk = RiskClassificationEngine.classifyDeviation(deviation, settings.sensitivity);
+
+      if (magnitude > this.maxMagneticField) this.maxMagneticField = magnitude;
+      if (Math.abs(deviation) > Math.abs(this.maxDeviation)) this.maxDeviation = deviation;
+      
+      if (this.isHigherRisk(risk, this.highestRiskLevel)) {
+        this.highestRiskLevel = risk;
+      }
+
+      if (risk === RiskLevel.WARNING || risk === RiskLevel.CRITICAL) {
+        if (this.mapData.length > 0 && this.mapData[this.mapData.length - 1].risk !== risk) {
+          this.anomalyCount++;
+        }
+      }
+
+      this.mapData.push({
+        time: Date.now() - this.startTime,
+        deviation,
+        risk
+      });
+
+      HapticFeedbackManager.updateRiskLevel(risk);
+
+      this.notifyListeners({
+        raw: vector,
+        magnitude,
+        smoothed,
+        deviation,
+        risk
+      });
+    };
+
+    if (settings.simulationMode) {
