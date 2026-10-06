@@ -89,3 +89,48 @@ export class ScanManager {
     };
 
     if (settings.simulationMode) {
+      SimulationEngine.start(onUpdate);
+    } else {
+      MagnetometerService.setUpdateInterval(100);
+      MagnetometerService.start(onUpdate);
+    }
+  }
+
+  private isHigherRisk(a: RiskLevel, b: RiskLevel): boolean {
+    const order = {
+      [RiskLevel.SAFE]: 0,
+      [RiskLevel.LOW]: 1,
+      [RiskLevel.WARNING]: 2,
+      [RiskLevel.CRITICAL]: 3
+    };
+    return order[a] > order[b];
+  }
+
+  async stopScan(): Promise<ScanResult | null> {
+    if (!this.isScanning) return null;
+    this.isScanning = false;
+    
+    MagnetometerService.stop();
+    SimulationEngine.stop();
+    HapticFeedbackManager.stop();
+
+    const duration = Date.now() - this.startTime;
+
+    const result: ScanResult = {
+      id: Date.now().toString(),
+      date: Date.now(),
+      duration,
+      calibrationBaseline: this.baseline,
+      maxMagneticField: this.maxMagneticField,
+      maxDeviation: this.maxDeviation,
+      anomalyCount: this.anomalyCount,
+      highestRiskLevel: this.highestRiskLevel,
+      mapData: this.mapData
+    };
+
+    await LocalStorage.saveScan(result);
+    return result;
+  }
+}
+
+export default new ScanManager();
