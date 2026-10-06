@@ -13,3 +13,17 @@ export const DEFAULT_SETTINGS: AppSettings = {
 class SettingsManager {
   private settings: AppSettings = { ...DEFAULT_SETTINGS };
 
+  async loadSettings(): Promise<AppSettings> {
+    try {
+      const stored = await AsyncStorage.getItem(SETTINGS_KEY);
+      if (stored) {
+        this.settings = { ...DEFAULT_SETTINGS, ...JSON.parse(stored) };
+      }
+    } catch (e) {
+      console.error('Error loading settings', e);
+    }
+    return this.settings;
+  }
+
+  async saveSettings(newSettings: Partial<AppSettings>) {
+    this.settings = { ...this.settings, ...newSettings };
