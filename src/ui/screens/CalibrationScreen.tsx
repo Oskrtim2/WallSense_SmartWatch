@@ -20,3 +20,24 @@ export const CalibrationScreen = ({ navigation }: any) => {
       count++;
       setProgress(count / 30); // ~3 seconds calibration
       
+      if (count >= 30) {
+        MagnetometerService.stop();
+        const { baseline } = CalibrationEngine.finishCalibration();
+        setIsCalibrating(false);
+        navigation.replace('Scan', { baseline });
+      }
+    });
+  };
+
+  useEffect(() => {
+    return () => MagnetometerService.stop();
+  }, []);
+
+  return (
+    <View style={styles.container}>
+      <Text style={styles.title}>Calibration</Text>
+      <Text style={styles.instructions}>
+        Hold the phone near the wall where you intend to scan. Keep it relatively stable.
+      </Text>
+      
+      {isCalibrating ? (
