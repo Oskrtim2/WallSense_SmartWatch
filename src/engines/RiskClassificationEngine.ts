@@ -16,3 +16,11 @@ export class RiskClassificationEngine {
     } else if (absDeviation >= thresh.warning) {
       return RiskLevel.WARNING;
     } else if (absDeviation >= thresh.low) {
+      return RiskLevel.LOW;
+    } else {
+      return RiskLevel.SAFE;
+    }
+  }
+}
+
+export default new RiskClassificationEngine();
