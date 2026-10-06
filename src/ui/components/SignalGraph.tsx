@@ -16,3 +16,21 @@ export const SignalGraph: React.FC<Props> = ({ data }) => {
       },
     ],
   };
+
+  return (
+    <View style={{ marginVertical: 10 }}>
+      <LineChart
+        data={chartData}
+        width={Dimensions.get('window').width - 40}
+        height={220}
+        chartConfig={{
+          backgroundColor: '#ffffff',
+          backgroundGradientFrom: '#ffffff',
+          backgroundGradientTo: '#ffffff',
+          decimalPlaces: 1,
+          color: (opacity = 1) => `rgba(0, 122, 255, ${opacity})`,
+          labelColor: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
+          style: {
+            borderRadius: 16,
+          },
+          propsForDots: {
