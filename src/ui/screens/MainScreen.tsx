@@ -61,3 +61,33 @@ export const MainScreen = ({ navigation }: any) => {
       >
         <Text style={styles.secondaryButtonText}>View History</Text>
       </TouchableOpacity>
+
+      <TouchableOpacity 
+        style={styles.secondaryButton} 
+        onPress={() => navigation.navigate('Settings')}
+      >
+        <Text style={styles.secondaryButtonText}>Settings</Text>
+      </TouchableOpacity>
+
+      <TouchableOpacity 
+        style={styles.secondaryButton} 
+        onPress={() => navigation.navigate('Diagnostics')}
+      >
+        <Text style={styles.secondaryButtonText}>Diagnostics</Text>
+      </TouchableOpacity>
+    </View>
+  );
+};
+
+const styles = StyleSheet.create({
+  container: { flex: 1, justifyContent: 'center', alignItems: 'center', padding: 20, backgroundColor: '#f5f5f5' },
+  title: { fontSize: 42, fontWeight: 'bold', marginBottom: 40, color: '#333' },
+  statusContainer: { marginBottom: 30, padding: 15, backgroundColor: '#fff', borderRadius: 10, width: '100%', elevation: 2 },
+  statusText: { fontSize: 16, marginBottom: 5, color: '#555' },
+  errorText: { color: 'red', textAlign: 'center', marginBottom: 20 },
+  button: { backgroundColor: '#007AFF', padding: 15, borderRadius: 10, width: '100%', alignItems: 'center', marginBottom: 15 },
+  buttonDisabled: { backgroundColor: '#ccc' },
+  buttonText: { color: '#fff', fontSize: 18, fontWeight: '600' },
+  secondaryButton: { padding: 15, borderRadius: 10, width: '100%', alignItems: 'center', marginBottom: 10, backgroundColor: '#e0e0e0' },
+  secondaryButtonText: { color: '#333', fontSize: 16, fontWeight: '500' }
+});
