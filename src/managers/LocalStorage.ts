@@ -24,3 +24,15 @@ class LocalStorage {
       console.error('Error getting history', e);
     }
     return [];
+  }
+
+  async clearHistory() {
+    try {
+      await AsyncStorage.removeItem(HISTORY_KEY);
+    } catch (e) {
+      console.error('Error clearing history', e);
+    }
+  }
+}
+
+export default new LocalStorage();
