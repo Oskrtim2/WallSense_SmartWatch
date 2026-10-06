@@ -21,3 +21,25 @@ const getRiskInfo = (level: RiskLevel) => {
   }
 };
 
+export const RiskIndicator: React.FC<Props> = ({ level }) => {
+  const { color, text } = getRiskInfo(level);
+
+  return (
+    <View style={styles.container}>
+      <View style={[styles.indicator, { backgroundColor: color }]}>
+        <Text style={styles.levelText}>{level}</Text>
+      </View>
+      <Text style={styles.descriptionText}>{text}</Text>
+    </View>
+  );
+};
+
+const styles = StyleSheet.create({
+  container: {
+    alignItems: 'center',
+    marginVertical: 20,
+  },
+  indicator: {
+    width: 200,
+    height: 200,
+    borderRadius: 100,
