@@ -8,3 +8,12 @@ class MagnetometerService {
     return await Magnetometer.isAvailableAsync();
   }
 
+  setUpdateInterval(intervalMs: number) {
+    Magnetometer.setUpdateInterval(intervalMs);
+  }
+
+  start(onUpdate: (data: Vector3) => void) {
+    if (this.subscription) return;
+    this.subscription = Magnetometer.addListener(onUpdate);
+  }
+
