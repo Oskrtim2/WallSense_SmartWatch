@@ -29,3 +29,18 @@ class HapticFeedbackManager {
         Vibration.vibrate([0, 200, 100, 200]);
         break;
       case RiskLevel.CRITICAL:
+        // Strong repeated vibration
+        this.isVibrating = true;
+        Vibration.vibrate([0, 300, 100], true); // true = repeat
+        break;
+    }
+  }
+
+  stop() {
+    Vibration.cancel();
+    this.isVibrating = false;
+    this.lastLevel = RiskLevel.SAFE;
+  }
+}
+
+export default new HapticFeedbackManager();
