@@ -27,3 +27,16 @@ class SmartwatchCommunication {
     this.isConnected = false;
     this.notify();
   }
+
+  getConnectionStatus() {
+    return this.isConnected;
+  }
+
+  sendRiskLevel(level: RiskLevel) {
+    if (!this.isConnected) return;
+    // In a real app, send data via Bluetooth/Native Modules
+    console.log(`[Smartwatch] Risk Level updated: ${level}`);
+  }
+}
+
+export default new SmartwatchCommunication();
