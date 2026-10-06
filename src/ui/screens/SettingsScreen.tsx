@@ -32,3 +32,36 @@ export const SettingsScreen = ({ navigation }: any) => {
     }
   };
 
+  return (
+    <View style={styles.container}>
+      <Text style={styles.header}>Settings</Text>
+
+      <View style={styles.settingRow}>
+        <Text style={styles.settingLabel}>Simulation Mode</Text>
+        <Switch 
+          value={settings.simulationMode} 
+          onValueChange={(val) => updateSetting('simulationMode', val)} 
+        />
+      </View>
+      <Text style={styles.helperText}>Use simulated data without scanning a wall.</Text>
+
+      <View style={styles.settingRow}>
+        <Text style={styles.settingLabel}>Haptic Feedback (Phone)</Text>
+        <Switch 
+          value={settings.vibrationEnabled} 
+          onValueChange={(val) => updateSetting('vibrationEnabled', val)} 
+        />
+      </View>
+
+      <View style={styles.settingRow}>
+        <Text style={styles.settingLabel}>Sensitivity: {settings.sensitivity}</Text>
+      </View>
+      <View style={styles.buttonRow}>
+        {Object.values(Sensitivity).map(s => (
+          <TouchableOpacity 
+            key={s} 
+            style={[styles.sensitivityBtn, settings.sensitivity === s && styles.sensitivityBtnActive]}
+            onPress={() => updateSetting('sensitivity', s)}
+          >
+            <Text style={[styles.sensitivityText, settings.sensitivity === s && styles.sensitivityTextActive]}>{s}</Text>
+          </TouchableOpacity>
