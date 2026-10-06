@@ -29,3 +29,17 @@ export interface ScanResult {
   id: string;
   date: number;
   duration: number;
+  calibrationBaseline: number;
+  maxMagneticField: number;
+  maxDeviation: number;
+  anomalyCount: number;
+  highestRiskLevel: RiskLevel;
+  mapData: any[];
+}
+
+export interface AppSettings {
+  sensitivity: Sensitivity;
+  simulationMode: boolean;
+  hapticIntensity: number;
+  vibrationEnabled: boolean;
+}
