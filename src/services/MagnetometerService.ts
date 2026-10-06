@@ -17,3 +17,12 @@ class MagnetometerService {
     this.subscription = Magnetometer.addListener(onUpdate);
   }
 
+  stop() {
+    if (this.subscription) {
+      this.subscription.remove();
+      this.subscription = null;
+    }
+  }
+}
+
+export default new MagnetometerService();
