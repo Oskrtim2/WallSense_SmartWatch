@@ -14,3 +14,18 @@ export enum Sensitivity {
 export interface Vector3 {
   x: number;
   y: number;
+  z: number;
+}
+
+export interface SensorData {
+  magnetometer: Vector3;
+  accelerometer?: Vector3;
+  gyroscope?: Vector3;
+  timestamp: number;
+  magnitude: number;
+}
+
+export interface ScanResult {
+  id: string;
+  date: number;
+  duration: number;
