@@ -41,3 +41,24 @@ export const CalibrationScreen = ({ navigation }: any) => {
       </Text>
       
       {isCalibrating ? (
+        <View style={styles.progressContainer}>
+          <Text style={styles.progressText}>Calibrating... {Math.round(progress * 100)}%</Text>
+        </View>
+      ) : (
+        <TouchableOpacity style={styles.button} onPress={startCalibration}>
+          <Text style={styles.buttonText}>Start Calibration</Text>
+        </TouchableOpacity>
+      )}
+    </View>
+  );
+};
+
+const styles = StyleSheet.create({
+  container: { flex: 1, justifyContent: 'center', alignItems: 'center', padding: 20 },
+  title: { fontSize: 32, fontWeight: 'bold', marginBottom: 20 },
+  instructions: { fontSize: 18, textAlign: 'center', marginBottom: 40, color: '#555' },
+  button: { backgroundColor: '#4CAF50', padding: 15, borderRadius: 10, width: '100%', alignItems: 'center' },
+  buttonText: { color: '#fff', fontSize: 18, fontWeight: '600' },
+  progressContainer: { alignItems: 'center' },
+  progressText: { fontSize: 24, fontWeight: 'bold', color: '#007AFF' }
+});
