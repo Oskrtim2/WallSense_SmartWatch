@@ -30,3 +30,34 @@ export const MainScreen = ({ navigation }: any) => {
 
   return (
     <View style={styles.container}>
+      <Text style={styles.title}>WallSense</Text>
+      
+      <View style={styles.statusContainer}>
+        <Text style={styles.statusText}>
+          Magnetometer: {hasMagnetometer ? 'âœ… Available' : 'âŒ Not Available'}
+        </Text>
+        <Text style={styles.statusText}>
+          Smartwatch: {watchConnected ? 'âœ… Connected' : 'âŒ Disconnected'}
+        </Text>
+      </View>
+
+      {!hasMagnetometer && (
+        <Text style={styles.errorText}>
+          Warning: Your device does not have a usable magnetometer. Magnetic scanning cannot be performed.
+        </Text>
+      )}
+
+      <TouchableOpacity 
+        style={[styles.button, !hasMagnetometer && styles.buttonDisabled]} 
+        onPress={handleStart}
+        disabled={!hasMagnetometer}
+      >
+        <Text style={styles.buttonText}>Start Calibration & Scan</Text>
+      </TouchableOpacity>
+
+      <TouchableOpacity 
+        style={styles.secondaryButton} 
+        onPress={() => navigation.navigate('History')}
+      >
+        <Text style={styles.secondaryButtonText}>View History</Text>
+      </TouchableOpacity>
