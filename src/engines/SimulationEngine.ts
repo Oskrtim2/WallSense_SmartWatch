@@ -30,3 +30,18 @@ export class SimulationEngine {
         x: (this.baseMagneticField / Math.sqrt(3)) + noiseX + (anomaly / Math.sqrt(3)),
         y: (this.baseMagneticField / Math.sqrt(3)) + noiseY + (anomaly / Math.sqrt(3)),
         z: (this.baseMagneticField / Math.sqrt(3)) + noiseZ + (anomaly / Math.sqrt(3)),
+      };
+
+      onUpdate(vec);
+    }, 100);
+  }
+
+  stop() {
+    if (this.interval) {
+      clearInterval(this.interval);
+      this.interval = null;
+    }
+  }
+}
+
+export default new SimulationEngine();
