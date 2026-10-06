@@ -65,3 +65,36 @@ export const SettingsScreen = ({ navigation }: any) => {
           >
             <Text style={[styles.sensitivityText, settings.sensitivity === s && styles.sensitivityTextActive]}>{s}</Text>
           </TouchableOpacity>
+        ))}
+      </View>
+      <Text style={styles.helperText}>Higher sensitivity = more false positives.</Text>
+
+      <View style={{ marginVertical: 30 }} />
+      <Text style={styles.settingLabel}>Smartwatch Connection</Text>
+      <TouchableOpacity style={styles.actionBtn} onPress={toggleWatch}>
+        <Text style={styles.actionBtnText}>
+          {watchConnected ? 'Disconnect Simulated Watch' : 'Connect Simulated Watch'}
+        </Text>
+      </TouchableOpacity>
+
+      <TouchableOpacity style={[styles.actionBtn, { marginTop: 20, backgroundColor: '#757575' }]} onPress={() => navigation.goBack()}>
+        <Text style={styles.actionBtnText}>Back</Text>
+      </TouchableOpacity>
+    </View>
+  );
+};
+
+const styles = StyleSheet.create({
+  container: { flex: 1, padding: 20, backgroundColor: '#f5f5f5' },
+  header: { fontSize: 32, fontWeight: 'bold', marginBottom: 30 },
+  settingRow: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', paddingVertical: 15, borderBottomWidth: 1, borderBottomColor: '#ddd' },
+  settingLabel: { fontSize: 18, color: '#333' },
+  helperText: { fontSize: 12, color: '#888', marginTop: 5, marginBottom: 15 },
+  buttonRow: { flexDirection: 'row', justifyContent: 'space-between', marginTop: 10 },
+  sensitivityBtn: { padding: 10, borderRadius: 5, backgroundColor: '#e0e0e0', flex: 1, marginHorizontal: 5, alignItems: 'center' },
+  sensitivityBtnActive: { backgroundColor: '#007AFF' },
+  sensitivityText: { color: '#333' },
+  sensitivityTextActive: { color: '#fff', fontWeight: 'bold' },
+  actionBtn: { backgroundColor: '#4CAF50', padding: 15, borderRadius: 10, alignItems: 'center' },
+  actionBtnText: { color: '#fff', fontSize: 16, fontWeight: 'bold' }
+});
