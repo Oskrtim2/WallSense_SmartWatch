@@ -13,3 +13,17 @@ class SmartwatchCommunication {
 
   private notify() {
     this.listeners.forEach(l => l(this.isConnected));
+  }
+
+  connect() {
+    // Mock connection
+    setTimeout(() => {
+      this.isConnected = true;
+      this.notify();
+    }, 1000);
+  }
+
+  disconnect() {
+    this.isConnected = false;
+    this.notify();
+  }
