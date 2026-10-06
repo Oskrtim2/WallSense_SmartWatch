@@ -34,3 +34,20 @@ export const SignalGraph: React.FC<Props> = ({ data }) => {
             borderRadius: 16,
           },
           propsForDots: {
+            r: '0',
+          },
+        }}
+        bezier
+        style={{
+          marginVertical: 8,
+          borderRadius: 16,
+        }}
+        withDots={false}
+        withInnerLines={false}
+        withOuterLines={true}
+        withVerticalLabels={false}
+        withHorizontalLabels={true}
+      />
+    </View>
+  );
+};
