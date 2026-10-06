@@ -7,3 +7,12 @@ export class RiskClassificationEngine {
     [Sensitivity.HIGH]: { low: 2, warning: 8, critical: 15 }
   };
 
+  classifyDeviation(deviation: number, sensitivity: Sensitivity): RiskLevel {
+    const thresh = this.thresholds[sensitivity];
+    const absDeviation = Math.abs(deviation);
+
+    if (absDeviation >= thresh.critical) {
+      return RiskLevel.CRITICAL;
+    } else if (absDeviation >= thresh.warning) {
+      return RiskLevel.WARNING;
+    } else if (absDeviation >= thresh.low) {
