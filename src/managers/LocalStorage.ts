@@ -11,3 +11,16 @@ class LocalStorage {
       await AsyncStorage.setItem(HISTORY_KEY, JSON.stringify(history));
     } catch (e) {
       console.error('Error saving scan', e);
+    }
+  }
+
+  async getHistory(): Promise<ScanResult[]> {
+    try {
+      const stored = await AsyncStorage.getItem(HISTORY_KEY);
+      if (stored) {
+        return JSON.parse(stored);
+      }
+    } catch (e) {
+      console.error('Error getting history', e);
+    }
+    return [];
