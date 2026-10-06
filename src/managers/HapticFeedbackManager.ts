@@ -14,3 +14,18 @@ class HapticFeedbackManager {
     this.lastLevel = level;
 
     Vibration.cancel();
+    this.isVibrating = false;
+
+    switch (level) {
+      case RiskLevel.SAFE:
+        // No vibration
+        break;
+      case RiskLevel.LOW:
+        // One short vibration
+        Vibration.vibrate(100);
+        break;
+      case RiskLevel.WARNING:
+        // Two medium vibrations
+        Vibration.vibrate([0, 200, 100, 200]);
+        break;
+      case RiskLevel.CRITICAL:
