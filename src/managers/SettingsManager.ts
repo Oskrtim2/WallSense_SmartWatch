@@ -27,3 +27,16 @@ class SettingsManager {
 
   async saveSettings(newSettings: Partial<AppSettings>) {
     this.settings = { ...this.settings, ...newSettings };
+    try {
+      await AsyncStorage.setItem(SETTINGS_KEY, JSON.stringify(this.settings));
+    } catch (e) {
+      console.error('Error saving settings', e);
+    }
+  }
+
+  getSettings(): AppSettings {
+    return this.settings;
+  }
+}
+
+export default new SettingsManager();
