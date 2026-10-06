@@ -24,3 +24,29 @@ export const ScanScreen = ({ route, navigation }: any) => {
         if (next.length > 50) next.shift(); // keep last 50 points
         return next;
       });
+      SmartwatchCommunication.sendRiskLevel(newData.risk);
+    });
+
+    const unsubWatch = SmartwatchCommunication.subscribe(setWatchConnected);
+    setWatchConnected(SmartwatchCommunication.getConnectionStatus());
+
+    ScanManager.startScan(baseline);
+
+    return () => {
+      unsubScan();
+      unsubWatch();
+      ScanManager.stopScan();
+    };
+  }, [baseline]);
+
+  const stopScanning = async () => {
+    await ScanManager.stopScan();
+    navigation.popToTop();
+  };
+
+  return (
+    <ScrollView style={styles.container} contentContainerStyle={{ alignItems: 'center' }}>
+      <Text style={styles.header}>Scanning Mode</Text>
+      <Text style={styles.status}>Smartwatch: {watchConnected ? 'Connected' : 'Disconnected'}</Text>
+      
+      <RiskIndicator level={data.risk} />
