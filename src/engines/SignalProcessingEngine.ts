@@ -22,3 +22,14 @@ export class SignalProcessingEngine {
     const sum = this.history.reduce((a, b) => a + b, 0);
     return sum / this.history.length;
   }
+
+  getDeviation(current: number, baseline: number): number {
+    return current - baseline;
+  }
+
+  reset() {
+    this.history = [];
+  }
+}
+
+export default new SignalProcessingEngine();
