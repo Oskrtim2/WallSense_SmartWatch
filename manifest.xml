@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!--
+  Wall Sense - Connect IQ manifest
+  Target: Garmin Forerunner 165 (390 x 390 round AMOLED, API level 5.2)
+
+  Note: Toybox.Attention is allowed for watch-apps and is available on the
+  Forerunner 165. There is no "Vibrate" permission in the Connect IQ
+  permission list, so only the Sensor permission is required here.
+-->
+<iq:manifest xmlns:iq="http://www.garmin.com/xml/connectiq" version="3">
+    <iq:application
+        entry="WallSenseApp"
+        id="B4D3F7A19C2E4E6A8F510D3C7B2A9E64"
+        launcherIcon="@Drawables.LauncherIcon"
+        minSdkVersion="5.2.0"
+        name="@Strings.AppName"
+        type="watch-app"
+        version="1.0.0">
+
+        <iq:products>
+            <iq:product id="fr165"/>
+        </iq:products>
+
+        <iq:permissions>
+            <iq:uses-permission id="Sensor"/>
+        </iq:permissions>
+
+        <iq:languages>
+            <iq:language>eng</iq:language>
+        </iq:languages>
+    </iq:application>
+</iq:manifest>
