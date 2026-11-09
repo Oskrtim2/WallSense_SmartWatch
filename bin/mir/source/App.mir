@@ -1,0 +1,118 @@
+[ @file = "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\App.mc"; @line = 11; @symbol_usingdef<0> = [Toybox,11,6,12]; @symbol_usingdef<1> = [Application,11,13,24]; @symbol_usingAlias = [App,11,28,31]; ]
+using Toybox.Application as :App;
+[ @file = "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\App.mc"; @line = 12; @symbol_usingdef<0> = [Toybox,12,6,12]; @symbol_usingdef<1> = [Lang,12,13,17]; @symbol_usingAlias = [Lang,12,21,25]; ]
+using Toybox.Lang as :Lang;
+[ @file = "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\App.mc"; @line = 13; @symbol_usingdef<0> = [Toybox,13,6,12]; @symbol_usingdef<1> = [WatchUi,13,13,20]; @symbol_usingAlias = [Ui,13,24,26]; ]
+using Toybox.WatchUi as :Ui;
+[ @file = "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\App.mc"; @line = 15; @symbol_classdef = [WallSenseApp,15,6,18]; @symbol_extends<0> = [App,15,27,30]; @symbol_extends<1> = [AppBase,15,31,38]; ]
+class WallSenseApp extends App.AppBase {
+    [ @file = "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\App.mc"; @line = 15; ]
+    <init> {
+    }
+    [ @file = "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\App.mc"; @line = 15; ]
+    static
+    <init> {
+    }
+    [ @file = "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\App.mc"; @line = 17; @position = 16; @symbol_vardef = [_delegate,17,16,25]; ]
+    private
+    var _delegate;
+    [ @file = "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\App.mc"; @line = 18; @position = 16; @symbol_vardef = [_view,18,16,21]; ]
+    private
+    var _view;
+    [ @file = "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\App.mc"; @line = 20; @symbol_functiondef = [initialize,20,20,30]; ]
+    public
+    function initialize() as Void {
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_App_mc_20_33_25_4_start:
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\App.mc" 21 8 ]
+        symbol [ App %tmp.1 21 8 11 ];
+        %tmp.1 = getm $.Toybox.Application;
+        symbol [ AppBase %tmp.2 21 12 19 ];
+        %tmp.2 = getv %tmp.1 :AppBase;
+        symbol [ initialize %tmp.3 21 20 30 ];
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\App.mc" 23 8 ]
+        symbol [ WallSenseDelegate %tmp.7 23 24 41 ];
+        %tmp.7 = getv ? :WallSenseDelegate;
+        %tmp.4 = newc %tmp.7 ();
+        symbol [ _delegate ? 23 8 17 ];
+        putv self :_delegate %tmp.4;
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\App.mc" 24 8 ]
+        symbol [ WallSenseView %tmp.11 24 20 33 ];
+        %tmp.11 = getv ? :WallSenseView;
+        symbol [ _delegate %tmp.13 24 34 43 ];
+        %tmp.13 = getv ? :_delegate;
+        %tmp.8 = newc %tmp.11 (%tmp.13);
+        symbol [ _view ? 24 8 13 ];
+        putv self :_view %tmp.8;
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_App_mc_20_33_25_4_stop:
+    }
+    [ @file = "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\App.mc"; @line = 27; @symbol_functiondef = [onStart,27,20,27]; @symbol_param<0> = [state,27,28,33]; @symbol_param<0>_type<0> = [Lang,27,37,41]; @symbol_param<0>_type<1> = [Dictionary,27,42,52]; ]
+    public
+    function onStart(state as Lang.Dictionary or Null) as Void {
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_App_mc_27_63_29_4_start:
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\App.mc" 28 8 ]
+        symbol [ _delegate %tmp.2 28 8 17 ];
+        %tmp.2 = getv ? :_delegate;
+        symbol [ startSession %tmp.3 28 18 30 ];
+        %tmp.3 = getv function %tmp.2 :startSession;
+        invoke %tmp.2 %tmp.3();
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_App_mc_27_63_29_4_stop:
+    }
+    [ @file = "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\App.mc"; @line = 31; @symbol_functiondef = [onActive,31,20,28]; @symbol_param<0> = [state,31,29,34]; @symbol_param<0>_type<0> = [Lang,31,38,42]; @symbol_param<0>_type<1> = [Dictionary,31,43,53]; ]
+    public
+    function onActive(state as Lang.Dictionary or Null) as Void {
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_App_mc_31_64_33_4_start:
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\App.mc" 32 8 ]
+        symbol [ _delegate %tmp.2 32 8 17 ];
+        %tmp.2 = getv ? :_delegate;
+        symbol [ resumeSession %tmp.3 32 18 31 ];
+        %tmp.3 = getv function %tmp.2 :resumeSession;
+        invoke %tmp.2 %tmp.3();
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_App_mc_31_64_33_4_stop:
+    }
+    [ @file = "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\App.mc"; @line = 35; @symbol_functiondef = [onInactive,35,20,30]; @symbol_param<0> = [state,35,31,36]; @symbol_param<0>_type<0> = [Lang,35,40,44]; @symbol_param<0>_type<1> = [Dictionary,35,45,55]; ]
+    public
+    function onInactive(state as Lang.Dictionary or Null) as Void {
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_App_mc_35_66_37_4_start:
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\App.mc" 36 8 ]
+        symbol [ _delegate %tmp.2 36 8 17 ];
+        %tmp.2 = getv ? :_delegate;
+        symbol [ pauseSession %tmp.3 36 18 30 ];
+        %tmp.3 = getv function %tmp.2 :pauseSession;
+        invoke %tmp.2 %tmp.3();
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_App_mc_35_66_37_4_stop:
+    }
+    [ @file = "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\App.mc"; @line = 39; @symbol_functiondef = [onStop,39,20,26]; @symbol_param<0> = [state,39,27,32]; @symbol_param<0>_type<0> = [Lang,39,36,40]; @symbol_param<0>_type<1> = [Dictionary,39,41,51]; ]
+    public
+    function onStop(state as Lang.Dictionary or Null) as Void {
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_App_mc_39_62_41_4_start:
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\App.mc" 40 8 ]
+        symbol [ _delegate %tmp.2 40 8 17 ];
+        %tmp.2 = getv ? :_delegate;
+        symbol [ shutdown %tmp.3 40 18 26 ];
+        %tmp.3 = getv function %tmp.2 :shutdown;
+        invoke %tmp.2 %tmp.3();
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_App_mc_39_62_41_4_stop:
+    }
+    [ @file = "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\App.mc"; @line = 43; @symbol_functiondef = [getInitialView,43,20,34]; ]
+    public
+    function getInitialView() {
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_App_mc_43_37_45_4_start:
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\App.mc" 44 8 ]
+        %tmp.1 = newa 2;
+        symbol [ _view %tmp.3 44 16 21 ];
+        %tmp.3 = getv ? :_view;
+        %tmp.4 = dup %tmp.1;
+        %tmp.5 = aputv %tmp.4 0 %tmp.3;
+        symbol [ _delegate %tmp.7 44 23 32 ];
+        %tmp.7 = getv ? :_delegate;
+        %tmp.8 = dup %tmp.5;
+        %tmp.9 = aputv %tmp.8 1 %tmp.7;
+        ret %tmp.9;
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_App_mc_43_37_45_4_stop:
+    }
+}
+[ @file = "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\App.mc"; @line = 11; ]
+<init> {
+}
