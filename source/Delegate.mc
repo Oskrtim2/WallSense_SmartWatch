@@ -368,8 +368,9 @@ class WallSenseDelegate extends Ui.InputDelegate {
             _releaseSamples = 5;
         }
 
-        // About a 10 second time constant for baseline drift tracking.
-        _driftAlpha = 1.0 / (rate * 10.0);
+        // About a 20 second time constant for baseline drift tracking, slow
+        // enough that approaching a cable gradually is not absorbed.
+        _driftAlpha = 1.0 / (rate * 20.0);
     }
 
     private function tryRegister(rate as Lang.Number, withAccel as Lang.Boolean) as Lang.Boolean {
@@ -728,7 +729,7 @@ class WallSenseDelegate extends Ui.InputDelegate {
 
         // Slowly follow drift (temperature, small posture changes) while
         // nothing is detected. Frozen during an anomaly or near threshold.
-        if (!_anomaly && _overCount == 0 && deviation < _threshold * 0.5) {
+        if (!_anomaly && _overCount == 0 && deviation < _threshold * 0.3) {
             _baseline += (magnitude - _baseline) * _driftAlpha;
         }
 
