@@ -15,7 +15,9 @@
 //      because turning the wrist changes the reading on its own.
 //   7. While there is no anomaly, the baseline slowly follows the field to
 //      absorb drift.
-//   8. Haptic repetition, pulse width and pattern complexity grow with delta.
+//   8. A live (AC) cable makes the reading fluctuate fast. That ripple is
+//      measured too and triggers an anomaly on its own.
+//   9. Haptic repetition, pulse width and pattern complexity grow with delta.
 //
 
 using Toybox.Attention as AttentionModule;
@@ -74,6 +76,20 @@ class WallSenseDelegate extends Ui.InputDelegate {
     private var _triggerSamples;
     private var _releaseSamples;
     private var _driftAlpha;
+
+    // ---------------------------------------------------------------------
+    // AC ripple detector (live cables). Mains current oscillates at 50/60 Hz;
+    // sampled at ~25 Hz it aliases into fast fluctuation of the magnitude,
+    // even when the average field barely changes.
+    // ---------------------------------------------------------------------
+    private var _hpMean;
+    private var _hpInit;
+    private var _hpAlpha;
+    private var _rippleSq;
+    private var _rippleAlpha;
+    private var _rippleCalibSum;
+    private var _rippleThreshold;
+    private var _score;
 
     // ---------------------------------------------------------------------
     // Orientation state (accelerometer)
@@ -137,6 +153,7 @@ class WallSenseDelegate extends Ui.InputDelegate {
         _calibCount = 0;
         _calibMean = 0.0;
         _calibM2 = 0.0;
+        _rippleCalibSum = 0.0;
         _baseline = 0.0;
         _threshold = 6.0;
         _thresholdText = "6.0";
@@ -149,6 +166,14 @@ class WallSenseDelegate extends Ui.InputDelegate {
         _triggerSamples = 6;
         _releaseSamples = 12;
         _driftAlpha = 0.004;
+
+        _hpMean = 0.0;
+        _hpInit = false;
+        _hpAlpha = 0.13;
+        _rippleSq = 0.0;
+        _rippleAlpha = 0.1;
+        _rippleThreshold = 2.0;
+        _score = 0.0;
 
         _useAccel = true;
         _refGx = 0.0;
@@ -371,6 +396,16 @@ class WallSenseDelegate extends Ui.InputDelegate {
         // About a 20 second time constant for baseline drift tracking, slow
         // enough that approaching a cable gradually is not absorbed.
         _driftAlpha = 1.0 / (rate * 20.0);
+
+        // Ripple filter: ~0.3 s running mean, ~0.4 s RMS window.
+        _hpAlpha = 1.0 / (rate * 0.3);
+        _rippleAlpha = 1.0 / (rate * 0.4);
+        if (_hpAlpha > 1.0) {
+            _hpAlpha = 1.0;
+        }
+        if (_rippleAlpha > 1.0) {
+            _rippleAlpha = 1.0;
+        }
     }
 
     private function tryRegister(rate as Lang.Number, withAccel as Lang.Boolean) as Lang.Boolean {
@@ -464,6 +499,7 @@ class WallSenseDelegate extends Ui.InputDelegate {
             _calibCount = 0;
             _calibMean = 0.0;
             _calibM2 = 0.0;
+            _rippleCalibSum = 0.0;
             _calibrationStart = now;
         }
 
@@ -476,6 +512,7 @@ class WallSenseDelegate extends Ui.InputDelegate {
             _calibCount = 0;
             _calibMean = 0.0;
             _calibM2 = 0.0;
+            _rippleCalibSum = 0.0;
             _calibrationStart = now;
         }
 
@@ -516,9 +553,12 @@ class WallSenseDelegate extends Ui.InputDelegate {
                 continue;
             }
 
+            var residual = updateRipple(magnitude);
+
             if (_calibrating) {
                 if (sampleTime - _calibrationStart >= _calibSettleMs) {
                     addCalibrationSample(magnitude);
+                    _rippleCalibSum += residual * residual;
                 }
                 continue;
             }
@@ -542,9 +582,13 @@ class WallSenseDelegate extends Ui.InputDelegate {
                 _overCount = 0;
                 _underCount = 0;
                 _nextVibeAt = 0;
+                _score = 0.0;
             } else if (_needsRebase && rebaseCount > 0) {
                 _baseline = rebaseSum / rebaseCount;
                 _delta = 0.0;
+                // The movement itself made the reading fluctuate.
+                _hpInit = false;
+                _rippleSq = 0.0;
                 _needsRebase = false;
                 setReferenceFromBatch();
             }
@@ -569,6 +613,7 @@ class WallSenseDelegate extends Ui.InputDelegate {
         _calibCount = 0;
         _calibMean = 0.0;
         _calibM2 = 0.0;
+        _rippleCalibSum = 0.0;
 
         _delta = 0.0;
         _overCount = 0;
@@ -583,6 +628,21 @@ class WallSenseDelegate extends Ui.InputDelegate {
         _lastSampleTime = _calibrationStart;
         // Keep an existing lost-sensor flag. If registration failed, the
         // watchdog/retry path must remain active until a real sample arrives.
+    }
+
+    // High-pass the magnitude (sample minus a ~0.3 s running mean) and keep a
+    // running mean square of the result. Returns this sample's residual.
+    private function updateRipple(magnitude) {
+        if (!_hpInit) {
+            _hpMean = magnitude;
+            _hpInit = true;
+            return 0.0;
+        }
+
+        var residual = magnitude - _hpMean;
+        _hpMean += residual * _hpAlpha;
+        _rippleSq += (residual * residual - _rippleSq) * _rippleAlpha;
+        return residual;
     }
 
     private function addCalibrationSample(magnitude) as Void {
@@ -740,10 +800,19 @@ class WallSenseDelegate extends Ui.InputDelegate {
             _delta = 0.0;
         }
 
+        // Combined score: steady field change OR AC ripple from a live cable,
+        // each relative to its own threshold. 1.0 means "at threshold".
         var ratio = deviation / _threshold;
+        if (_rippleThreshold > 0.0) {
+            var rippleRatio = MathModule.sqrt(_rippleSq) / _rippleThreshold;
+            if (rippleRatio > ratio) {
+                ratio = rippleRatio;
+            }
+        }
+        _score += (ratio - _score) * 0.35;
 
         if (!_anomaly) {
-            if (deviation > _threshold) {
+            if (ratio > 1.0) {
                 _overCount += 1;
                 if (_overCount >= _triggerSamples) {
                     _anomaly = true;
@@ -755,7 +824,7 @@ class WallSenseDelegate extends Ui.InputDelegate {
             }
         } else {
             // 35% release hysteresis prevents chatter at the threshold.
-            if (deviation < _threshold * 0.65) {
+            if (ratio < 0.65) {
                 _underCount += 1;
                 if (_underCount >= _releaseSamples) {
                     _anomaly = false;
@@ -816,6 +885,22 @@ class WallSenseDelegate extends Ui.InputDelegate {
         if (!(threshold > 0.0)) {
             threshold = 25.0;
         }
+
+        // Ripple threshold: 3x the RMS ripple of the quiet room, at least
+        // 0.4% of the ambient field (~2 mG).
+        var rippleBase = 0.0;
+        if (_calibCount > 0 && _rippleCalibSum > 0.0) {
+            rippleBase = MathModule.sqrt(_rippleCalibSum / _calibCount);
+        }
+        var rippleThreshold = rippleBase * 3.0;
+        if (rippleThreshold < ambient * 0.004) {
+            rippleThreshold = ambient * 0.004;
+        }
+        if (!(rippleThreshold > 0.0)) {
+            rippleThreshold = 2.0;
+        }
+        _rippleThreshold = rippleThreshold;
+        _score = 0.0;
 
         _baseline = _calibMean;
         _needsRebase = false;
@@ -1070,7 +1155,8 @@ class WallSenseDelegate extends Ui.InputDelegate {
         if (!_hasBaseline || _threshold <= 0.0) {
             return 0.0;
         }
-        return (_delta / _threshold).toFloat();
+        // Includes the AC ripple, so the gauge also reacts to live cables.
+        return _score.toFloat();
     }
 
     public function getCalibrationProgress() as Lang.Float {
