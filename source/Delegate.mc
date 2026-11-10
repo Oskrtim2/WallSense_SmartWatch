@@ -358,7 +358,7 @@ class WallSenseDelegate extends Ui.InputDelegate {
             rate = 25;
         }
 
-        _triggerSamples = (rate * 0.25 + 0.5).toNumber();
+        _triggerSamples = (rate * 0.15 + 0.5).toNumber();
         if (_triggerSamples < 3) {
             _triggerSamples = 3;
         }
