@@ -7,7 +7,7 @@
 //      learn the ambient total field strength.
 //   2. delta = |sqrt(x^2 + y^2 + z^2) - baseline|
 //   3. The threshold is relative to the ambient field (at least 5 %) plus
-//      5 sigma of the noise measured during calibration.
+//      4 sigma of the noise measured during calibration.
 //   4. The deviation must last ~0.25 s to trigger and ~0.5 s to release.
 //   5. Samples taken while the vibration motor runs are ignored: the motor
 //      has a magnet and would otherwise trigger itself in a loop.
@@ -802,8 +802,8 @@ class WallSenseDelegate extends Ui.InputDelegate {
         if (ambient < 0.0) {
             ambient = -ambient;
         }
-        var threshold = sigma * 5.0 + ambient * 0.02;
-        var minThreshold = ambient * 0.05;
+        var threshold = sigma * 4.0 + ambient * 0.01;
+        var minThreshold = ambient * 0.025;
         var maxThreshold = ambient * 0.5;
 
         if (threshold < minThreshold) {
