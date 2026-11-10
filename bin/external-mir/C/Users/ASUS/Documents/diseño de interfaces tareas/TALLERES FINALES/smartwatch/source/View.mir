@@ -1,0 +1,2133 @@
+[ @file = "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc"; @line = 13; @symbol_usingdef<0> = [Toybox,13,6,12]; @symbol_usingdef<1> = [Graphics,13,13,21]; @symbol_usingAlias = [Gfx,13,25,28]; ]
+using Toybox.Graphics as :Gfx;
+[ @file = "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc"; @line = 14; @symbol_usingdef<0> = [Toybox,14,6,12]; @symbol_usingdef<1> = [Lang,14,13,17]; @symbol_usingAlias = [Lang,14,21,25]; ]
+using Toybox.Lang as :Lang;
+[ @file = "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc"; @line = 15; @symbol_usingdef<0> = [Toybox,15,6,12]; @symbol_usingdef<1> = [Math,15,13,17]; @symbol_usingAlias = [MathModule,15,21,31]; ]
+using Toybox.Math as :MathModule;
+[ @file = "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc"; @line = 16; @symbol_usingdef<0> = [Toybox,16,6,12]; @symbol_usingdef<1> = [System,16,13,19]; @symbol_usingAlias = [Sys,16,23,26]; ]
+using Toybox.System as :Sys;
+[ @file = "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc"; @line = 17; @symbol_usingdef<0> = [Toybox,17,6,12]; @symbol_usingdef<1> = [WatchUi,17,13,20]; @symbol_usingAlias = [Ui,17,24,26]; ]
+using Toybox.WatchUi as :Ui;
+[ @file = "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc"; @line = 19; @symbol_classdef = [WallSenseView,19,6,19]; @symbol_extends<0> = [Ui,19,28,30]; @symbol_extends<1> = [View,19,31,35]; ]
+class WallSenseView extends Ui.View {
+    [ @file = "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc"; @line = 19; ]
+    <init> {
+    }
+    [ @file = "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc"; @line = 19; ]
+    static
+    <init> {
+    }
+    [ @file = "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc"; @line = 21; @position = 16; @symbol_vardef = [_delegate,21,16,25]; ]
+    private
+    var _delegate;
+    [ @file = "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc"; @line = 25; @position = 16; @symbol_vardef = [_colorBg,25,16,24]; ]
+    private
+    var _colorBg;
+    [ @file = "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc"; @line = 26; @position = 16; @symbol_vardef = [_colorText,26,16,26]; ]
+    private
+    var _colorText;
+    [ @file = "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc"; @line = 27; @position = 16; @symbol_vardef = [_colorDim,27,16,25]; ]
+    private
+    var _colorDim;
+    [ @file = "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc"; @line = 28; @position = 16; @symbol_vardef = [_colorHint,28,16,26]; ]
+    private
+    var _colorHint;
+    [ @file = "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc"; @line = 29; @position = 16; @symbol_vardef = [_colorEdge,29,16,26]; ]
+    private
+    var _colorEdge;
+    [ @file = "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc"; @line = 30; @position = 16; @symbol_vardef = [_colorTrack,30,16,27]; ]
+    private
+    var _colorTrack;
+    [ @file = "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc"; @line = 31; @position = 16; @symbol_vardef = [_colorCyan,31,16,26]; ]
+    private
+    var _colorCyan;
+    [ @file = "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc"; @line = 32; @position = 16; @symbol_vardef = [_colorCyanMid,32,16,29]; ]
+    private
+    var _colorCyanMid;
+    [ @file = "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc"; @line = 33; @position = 16; @symbol_vardef = [_colorCyanDim,33,16,29]; ]
+    private
+    var _colorCyanDim;
+    [ @file = "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc"; @line = 34; @position = 16; @symbol_vardef = [_colorAmber,34,16,27]; ]
+    private
+    var _colorAmber;
+    [ @file = "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc"; @line = 35; @position = 16; @symbol_vardef = [_colorAmberMid,35,16,30]; ]
+    private
+    var _colorAmberMid;
+    [ @file = "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc"; @line = 36; @position = 16; @symbol_vardef = [_colorAmberDim,36,16,30]; ]
+    private
+    var _colorAmberDim;
+    [ @file = "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc"; @line = 37; @position = 16; @symbol_vardef = [_colorRed,37,16,25]; ]
+    private
+    var _colorRed;
+    [ @file = "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc"; @line = 38; @position = 16; @symbol_vardef = [_colorRedMid,38,16,28]; ]
+    private
+    var _colorRedMid;
+    [ @file = "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc"; @line = 39; @position = 16; @symbol_vardef = [_colorRedDim,39,16,28]; ]
+    private
+    var _colorRedDim;
+    [ @file = "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc"; @line = 41; @position = 16; @symbol_vardef = [_deltaText,41,16,26]; ]
+    private
+    var _deltaText;
+    [ @file = "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc"; @line = 42; @position = 16; @symbol_vardef = [_thresholdLine,42,16,30]; ]
+    private
+    var _thresholdLine;
+    [ @file = "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc"; @line = 43; @position = 16; @symbol_vardef = [_lastTextUpdate,43,16,31]; ]
+    private
+    var _lastTextUpdate;
+    [ @file = "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc"; @line = 45; @symbol_functiondef = [initialize,45,20,30]; @symbol_param<0> = [delegate,45,31,39]; ]
+    public
+    function initialize(delegate) as Void {
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_45_41_72_4_start:
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 46 8 ]
+        symbol [ Ui %tmp.1 46 8 10 ];
+        %tmp.1 = getm $.Toybox.WatchUi;
+        symbol [ View %tmp.2 46 11 15 ];
+        %tmp.2 = getv %tmp.1 :View;
+        symbol [ initialize %tmp.3 46 16 26 ];
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 48 8 ]
+        %tmp.4 = lgetv %delegate;
+        symbol [ delegate %tmp.4 48 20 28 ];
+        symbol [ _delegate ? 48 8 17 ];
+        putv self :_delegate %tmp.4;
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 50 8 ]
+        %tmp.5 = 0x000000;
+        symbol [ _colorBg ? 50 8 16 ];
+        putv self :_colorBg %tmp.5;
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 51 8 ]
+        %tmp.6 = 0xE8F7F2;
+        symbol [ _colorText ? 51 8 18 ];
+        putv self :_colorText %tmp.6;
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 52 8 ]
+        %tmp.7 = 0x77A79E;
+        symbol [ _colorDim ? 52 8 17 ];
+        putv self :_colorDim %tmp.7;
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 53 8 ]
+        %tmp.8 = 0x3F625B;
+        symbol [ _colorHint ? 53 8 18 ];
+        putv self :_colorHint %tmp.8;
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 54 8 ]
+        %tmp.9 = 0x14332E;
+        symbol [ _colorEdge ? 54 8 18 ];
+        putv self :_colorEdge %tmp.9;
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 55 8 ]
+        %tmp.10 = 0x163A34;
+        symbol [ _colorTrack ? 55 8 19 ];
+        putv self :_colorTrack %tmp.10;
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 57 8 ]
+        %tmp.11 = 0x00E6C8;
+        symbol [ _colorCyan ? 57 8 18 ];
+        putv self :_colorCyan %tmp.11;
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 58 8 ]
+        %tmp.12 = 0x0B8A78;
+        symbol [ _colorCyanMid ? 58 8 21 ];
+        putv self :_colorCyanMid %tmp.12;
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 59 8 ]
+        %tmp.13 = 0x06443C;
+        symbol [ _colorCyanDim ? 59 8 21 ];
+        putv self :_colorCyanDim %tmp.13;
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 61 8 ]
+        %tmp.14 = 0xFFB020;
+        symbol [ _colorAmber ? 61 8 19 ];
+        putv self :_colorAmber %tmp.14;
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 62 8 ]
+        %tmp.15 = 0xB06A00;
+        symbol [ _colorAmberMid ? 62 8 22 ];
+        putv self :_colorAmberMid %tmp.15;
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 63 8 ]
+        %tmp.16 = 0x4A2C00;
+        symbol [ _colorAmberDim ? 63 8 22 ];
+        putv self :_colorAmberDim %tmp.16;
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 65 8 ]
+        %tmp.17 = 0xFF4538;
+        symbol [ _colorRed ? 65 8 17 ];
+        putv self :_colorRed %tmp.17;
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 66 8 ]
+        %tmp.18 = 0xA82A20;
+        symbol [ _colorRedMid ? 66 8 20 ];
+        putv self :_colorRedMid %tmp.18;
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 67 8 ]
+        %tmp.19 = 0x48100C;
+        symbol [ _colorRedDim ? 67 8 20 ];
+        putv self :_colorRedDim %tmp.19;
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 69 8 ]
+        %tmp.20 = "0.0";
+        symbol [ _deltaText ? 69 8 18 ];
+        putv self :_deltaText %tmp.20;
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 70 8 ]
+        %tmp.21 = "TH 6.0";
+        symbol [ _thresholdLine ? 70 8 22 ];
+        putv self :_thresholdLine %tmp.21;
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 71 8 ]
+        %tmp.22 = 0;
+        symbol [ _lastTextUpdate ? 71 8 23 ];
+        putv self :_lastTextUpdate %tmp.22;
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_45_41_72_4_stop:
+    }
+    [ @file = "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc"; @line = 74; @symbol_functiondef = [onShow,74,20,26]; ]
+    public
+    function onShow() as Void {
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_74_37_76_4_start:
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 75 8 ]
+        symbol [ Ui %tmp.1 75 8 10 ];
+        %tmp.1 = getm $.Toybox.WatchUi;
+        symbol [ requestUpdate %tmp.2 75 11 24 ];
+        %tmp.2 = getv function %tmp.1 :requestUpdate;
+        invoke %tmp.1 %tmp.2();
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_74_37_76_4_stop:
+    }
+    [ @file = "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc"; @line = 78; @symbol_functiondef = [onUpdate,78,20,28]; @symbol_param<0> = [dc,78,29,31]; @symbol_param<0>_type<0> = [Gfx,78,35,38]; @symbol_param<0>_type<1> = [Dc,78,39,41]; ]
+    public
+    function onUpdate(dc as Gfx.Dc) as Void {
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_78_51_99_4_start:
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 79 8 ]
+        [ "C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_78_51_99_4_start" "C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_78_51_99_4_stop" ]
+        %width.1 = local;
+        symbol [ width %width.1 79 12 17 ];
+        %tmp.1 = lgetv %dc;
+        symbol [ dc %tmp.1 79 20 22 ];
+        symbol [ getWidth %tmp.2 79 23 31 ];
+        %tmp.2 = getv function %tmp.1 :getWidth;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        lputv %width.1 %tmp.3;
+        symbol [ width %width.1 79 12 17 ];
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 80 8 ]
+        [ "C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_78_51_99_4_start" "C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_78_51_99_4_stop" ]
+        %height.2 = local;
+        symbol [ height %height.2 80 12 18 ];
+        %tmp.4 = lgetv %dc;
+        symbol [ dc %tmp.4 80 21 23 ];
+        symbol [ getHeight %tmp.5 80 24 33 ];
+        %tmp.5 = getv function %tmp.4 :getHeight;
+        %tmp.6 = invoke %tmp.4 %tmp.5();
+        lputv %height.2 %tmp.6;
+        symbol [ height %height.2 80 12 18 ];
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 81 8 ]
+        [ "C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_78_51_99_4_start" "C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_78_51_99_4_stop" ]
+        %cx.3 = local;
+        symbol [ cx %cx.3 81 12 14 ];
+        %tmp.7 = lgetv %width.1;
+        symbol [ width %tmp.7 81 17 22 ];
+        %tmp.8 = 2;
+        %tmp.9 = div %tmp.7 %tmp.8;
+        lputv %cx.3 %tmp.9;
+        symbol [ cx %cx.3 81 12 14 ];
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 82 8 ]
+        [ "C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_78_51_99_4_start" "C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_78_51_99_4_stop" ]
+        %cy.4 = local;
+        symbol [ cy %cy.4 82 12 14 ];
+        %tmp.10 = lgetv %height.2;
+        symbol [ height %tmp.10 82 17 23 ];
+        %tmp.11 = 2;
+        %tmp.12 = div %tmp.10 %tmp.11;
+        lputv %cy.4 %tmp.12;
+        symbol [ cy %cy.4 82 12 14 ];
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 83 8 ]
+        [ "C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_78_51_99_4_start" "C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_78_51_99_4_stop" ]
+        %now.5 = local;
+        symbol [ now %now.5 83 12 15 ];
+        symbol [ Sys %tmp.13 83 18 21 ];
+        %tmp.13 = getm $.Toybox.System;
+        symbol [ getTimer %tmp.14 83 22 30 ];
+        %tmp.14 = getv function %tmp.13 :getTimer;
+        %tmp.15 = invoke %tmp.13 %tmp.14();
+        lputv %now.5 %tmp.15;
+        symbol [ now %now.5 83 12 15 ];
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 85 8 ]
+        %tmp.16 = lgetv %dc;
+        symbol [ dc %tmp.16 85 8 10 ];
+        symbol [ setColor %tmp.17 85 11 19 ];
+        %tmp.17 = getv function %tmp.16 :setColor;
+        symbol [ _colorBg %tmp.19 85 20 28 ];
+        %tmp.19 = getv ? :_colorBg;
+        symbol [ _colorBg %tmp.21 85 30 38 ];
+        %tmp.21 = getv ? :_colorBg;
+        invoke %tmp.16 %tmp.17(%tmp.19, %tmp.21);
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 86 8 ]
+        %tmp.22 = lgetv %dc;
+        symbol [ dc %tmp.22 86 8 10 ];
+        symbol [ clear %tmp.23 86 11 16 ];
+        %tmp.23 = getv function %tmp.22 :clear;
+        invoke %tmp.22 %tmp.23();
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 88 8 ]
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_88_8_91_8_if_stmt:
+        symbol [ _delegate %tmp.25 88 12 21 ];
+        %tmp.25 = getv ? :_delegate;
+        symbol [ isSensorLost %tmp.26 88 22 34 ];
+        %tmp.26 = getv function %tmp.25 :isSensorLost;
+        %tmp.27 = invoke %tmp.25 %tmp.26();
+        bf %tmp.27 @C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_88_8_91_8_if_end;
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_88_8_91_8_if_true:
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_88_38_91_8_start:
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 89 12 ]
+        %tmp.28 = self;
+        symbol [ drawSensorLost %tmp.29 89 12 26 ];
+        %tmp.29 = getv function %tmp.28 :drawSensorLost;
+        %tmp.30 = lgetv %dc;
+        symbol [ dc %tmp.30 89 27 29 ];
+        %tmp.31 = lgetv %cx.3;
+        symbol [ cx %tmp.31 89 31 33 ];
+        %tmp.32 = lgetv %cy.4;
+        symbol [ cy %tmp.32 89 35 37 ];
+        %tmp.33 = lgetv %now.5;
+        symbol [ now %tmp.33 89 39 42 ];
+        invoke %tmp.28 %tmp.29(%tmp.30, %tmp.31, %tmp.32, %tmp.33);
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 90 12 ]
+        ret ?;
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_88_38_91_8_stop:
+        goto @C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_88_8_91_8_if_end;
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_88_8_91_8_if_end:
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 93 8 ]
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_93_8_96_8_if_stmt:
+        symbol [ _delegate %tmp.35 93 12 21 ];
+        %tmp.35 = getv ? :_delegate;
+        symbol [ isCalibrating %tmp.36 93 22 35 ];
+        %tmp.36 = getv function %tmp.35 :isCalibrating;
+        %tmp.37 = invoke %tmp.35 %tmp.36();
+        bf %tmp.37 @C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_93_8_96_8_if_end;
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_93_8_96_8_if_true:
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_93_39_96_8_start:
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 94 12 ]
+        %tmp.38 = self;
+        symbol [ drawCalibration %tmp.39 94 12 27 ];
+        %tmp.39 = getv function %tmp.38 :drawCalibration;
+        %tmp.40 = lgetv %dc;
+        symbol [ dc %tmp.40 94 28 30 ];
+        %tmp.41 = lgetv %cx.3;
+        symbol [ cx %tmp.41 94 32 34 ];
+        %tmp.42 = lgetv %cy.4;
+        symbol [ cy %tmp.42 94 36 38 ];
+        %tmp.43 = lgetv %now.5;
+        symbol [ now %tmp.43 94 40 43 ];
+        invoke %tmp.38 %tmp.39(%tmp.40, %tmp.41, %tmp.42, %tmp.43);
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 95 12 ]
+        ret ?;
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_93_39_96_8_stop:
+        goto @C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_93_8_96_8_if_end;
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_93_8_96_8_if_end:
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 98 8 ]
+        %tmp.44 = self;
+        symbol [ drawMain %tmp.45 98 8 16 ];
+        %tmp.45 = getv function %tmp.44 :drawMain;
+        %tmp.46 = lgetv %dc;
+        symbol [ dc %tmp.46 98 17 19 ];
+        %tmp.47 = lgetv %cx.3;
+        symbol [ cx %tmp.47 98 21 23 ];
+        %tmp.48 = lgetv %cy.4;
+        symbol [ cy %tmp.48 98 25 27 ];
+        %tmp.49 = lgetv %now.5;
+        symbol [ now %tmp.49 98 29 32 ];
+        invoke %tmp.44 %tmp.45(%tmp.46, %tmp.47, %tmp.48, %tmp.49);
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_78_51_99_4_stop:
+    }
+    [ @file = "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc"; @line = 104; @symbol_functiondef = [drawMain,104,21,29]; @symbol_param<0> = [dc,104,30,32]; @symbol_param<0>_type<0> = [Gfx,104,36,39]; @symbol_param<0>_type<1> = [Dc,104,40,42]; @symbol_param<1> = [cx,104,44,46]; @symbol_param<2> = [cy,104,48,50]; @symbol_param<3> = [now,104,52,55]; ]
+    private
+    function drawMain(dc as Gfx.Dc, cx, cy, now) as Void {
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_104_65_156_4_start:
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 105 8 ]
+        %tmp.1 = self;
+        symbol [ drawFrame %tmp.2 105 8 17 ];
+        %tmp.2 = getv function %tmp.1 :drawFrame;
+        %tmp.3 = lgetv %dc;
+        symbol [ dc %tmp.3 105 18 20 ];
+        %tmp.4 = lgetv %cx;
+        symbol [ cx %tmp.4 105 22 24 ];
+        %tmp.5 = lgetv %cy;
+        symbol [ cy %tmp.5 105 26 28 ];
+        invoke %tmp.1 %tmp.2(%tmp.3, %tmp.4, %tmp.5);
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 106 8 ]
+        %tmp.6 = self;
+        symbol [ drawReactiveRings %tmp.7 106 8 25 ];
+        %tmp.7 = getv function %tmp.6 :drawReactiveRings;
+        %tmp.8 = lgetv %dc;
+        symbol [ dc %tmp.8 106 26 28 ];
+        %tmp.9 = lgetv %cx;
+        symbol [ cx %tmp.9 106 30 32 ];
+        %tmp.10 = lgetv %cy;
+        symbol [ cy %tmp.10 106 34 36 ];
+        %tmp.11 = lgetv %now;
+        symbol [ now %tmp.11 106 38 41 ];
+        invoke %tmp.6 %tmp.7(%tmp.8, %tmp.9, %tmp.10, %tmp.11);
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 107 8 ]
+        %tmp.12 = self;
+        symbol [ drawGauge %tmp.13 107 8 17 ];
+        %tmp.13 = getv function %tmp.12 :drawGauge;
+        %tmp.14 = lgetv %dc;
+        symbol [ dc %tmp.14 107 18 20 ];
+        %tmp.15 = lgetv %cx;
+        symbol [ cx %tmp.15 107 22 24 ];
+        %tmp.16 = lgetv %cy;
+        symbol [ cy %tmp.16 107 26 28 ];
+        invoke %tmp.12 %tmp.13(%tmp.14, %tmp.15, %tmp.16);
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 111 8 ]
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_111_8_115_8_if_stmt:
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_111_12_111_63_begin:
+        symbol [ _lastTextUpdate %tmp.18 111 12 27 ];
+        %tmp.18 = getv ? :_lastTextUpdate;
+        %tmp.19 = 0;
+        %tmp.20 = eq %tmp.18 %tmp.19;
+        bt %tmp.20 @C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_111_8_115_8_if_true;
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_111_36_111_63_false:
+        %tmp.21 = lgetv %now;
+        symbol [ now %tmp.21 111 37 40 ];
+        symbol [ _lastTextUpdate %tmp.23 111 43 58 ];
+        %tmp.23 = getv ? :_lastTextUpdate;
+        %tmp.24 = sub %tmp.21 %tmp.23;
+        %tmp.25 = 100;
+        %tmp.26 = gte %tmp.24 %tmp.25;
+        push %tmp.26;
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_111_36_111_63_end:
+        %tmp.27 = phi [%tmp.20 @C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_111_12_111_63_begin] [%tmp.26 @C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_111_36_111_63_false] [%tmp.27 @C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_111_36_111_63_end];
+        bf %tmp.27 @C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_111_8_115_8_if_end;
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_111_8_115_8_if_true:
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_111_68_115_8_start:
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 112 12 ]
+        symbol [ _delegate %tmp.29 112 25 34 ];
+        %tmp.29 = getv ? :_delegate;
+        symbol [ getDelta %tmp.30 112 35 43 ];
+        %tmp.30 = getv function %tmp.29 :getDelta;
+        %tmp.31 = invoke %tmp.29 %tmp.30();
+        symbol [ format %tmp.32 112 46 52 ];
+        %tmp.32 = getv function %tmp.31 :format;
+        %tmp.33 = "%.1f";
+        %tmp.34 = invoke %tmp.31 %tmp.32(%tmp.33);
+        symbol [ _deltaText ? 112 12 22 ];
+        putv self :_deltaText %tmp.34;
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 113 12 ]
+        %tmp.35 = "TH ";
+        symbol [ _delegate %tmp.37 113 37 46 ];
+        %tmp.37 = getv ? :_delegate;
+        symbol [ getThresholdText %tmp.38 113 47 63 ];
+        %tmp.38 = getv function %tmp.37 :getThresholdText;
+        %tmp.39 = invoke %tmp.37 %tmp.38();
+        %tmp.40 = add %tmp.35 %tmp.39;
+        symbol [ _thresholdLine ? 113 12 26 ];
+        putv self :_thresholdLine %tmp.40;
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 114 12 ]
+        %tmp.41 = lgetv %now;
+        symbol [ now %tmp.41 114 30 33 ];
+        symbol [ _lastTextUpdate ? 114 12 27 ];
+        putv self :_lastTextUpdate %tmp.41;
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_111_68_115_8_stop:
+        goto @C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_111_8_115_8_if_end;
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_111_8_115_8_if_end:
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 117 8 ]
+        [ "C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_104_65_156_4_start" "C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_104_65_156_4_stop" ]
+        %anomaly.1 = local;
+        symbol [ anomaly %anomaly.1 117 12 19 ];
+        symbol [ _delegate %tmp.43 117 22 31 ];
+        %tmp.43 = getv ? :_delegate;
+        symbol [ isAnomaly %tmp.44 117 32 41 ];
+        %tmp.44 = getv function %tmp.43 :isAnomaly;
+        %tmp.45 = invoke %tmp.43 %tmp.44();
+        lputv %anomaly.1 %tmp.45;
+        symbol [ anomaly %anomaly.1 117 12 19 ];
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 118 8 ]
+        [ "C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_104_65_156_4_start" "C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_104_65_156_4_stop" ]
+        %level.2 = local;
+        symbol [ level %level.2 118 12 17 ];
+        symbol [ _delegate %tmp.47 118 20 29 ];
+        %tmp.47 = getv ? :_delegate;
+        symbol [ getLevel %tmp.48 118 30 38 ];
+        %tmp.48 = getv function %tmp.47 :getLevel;
+        %tmp.49 = invoke %tmp.47 %tmp.48();
+        lputv %level.2 %tmp.49;
+        symbol [ level %level.2 118 12 17 ];
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 119 8 ]
+        [ "C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_104_65_156_4_start" "C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_104_65_156_4_stop" ]
+        %accent.3 = local;
+        symbol [ accent %accent.3 119 12 18 ];
+        %tmp.50 = self;
+        symbol [ activeColor %tmp.51 119 21 32 ];
+        %tmp.51 = getv function %tmp.50 :activeColor;
+        %tmp.52 = invoke %tmp.50 %tmp.51();
+        lputv %accent.3 %tmp.52;
+        symbol [ accent %accent.3 119 12 18 ];
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 121 8 ]
+        %tmp.53 = self;
+        symbol [ drawTitle %tmp.54 121 8 17 ];
+        %tmp.54 = getv function %tmp.53 :drawTitle;
+        %tmp.55 = lgetv %dc;
+        symbol [ dc %tmp.55 121 18 20 ];
+        %tmp.56 = lgetv %cx;
+        symbol [ cx %tmp.56 121 22 24 ];
+        invoke %tmp.53 %tmp.54(%tmp.55, %tmp.56);
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 123 8 ]
+        [ "C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_104_65_156_4_start" "C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_104_65_156_4_stop" ]
+        %status.4 = local;
+        symbol [ status %status.4 123 12 18 ];
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 124 8 ]
+        [ "C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_104_65_156_4_start" "C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_104_65_156_4_stop" ]
+        %statusColor.5 = local;
+        symbol [ statusColor %statusColor.5 124 12 23 ];
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 125 8 ]
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_125_8_135_8_if_stmt:
+        %tmp.57 = lgetv %anomaly.1;
+        symbol [ anomaly %tmp.57 125 12 19 ];
+        bf %tmp.57 @C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_125_8_135_8_if_else_false;
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_125_8_135_8_if_true:
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_125_21_132_8_start:
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 126 12 ]
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_126_12_130_12_if_stmt:
+        %tmp.58 = lgetv %level.2;
+        symbol [ level %tmp.58 126 16 21 ];
+        %tmp.59 = 4;
+        %tmp.60 = gte %tmp.58 %tmp.59;
+        bf %tmp.60 @C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_126_12_130_12_if_else_false;
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_126_12_130_12_if_true:
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_126_28_128_12_start:
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 127 16 ]
+        %tmp.61 = "STRONG SIGNAL";
+        lputv %status.4 %tmp.61;
+        symbol [ status %status.4 127 16 22 ];
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_126_28_128_12_stop:
+        goto @C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_126_12_130_12_if_end;
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_126_12_130_12_if_else_false:
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_128_19_130_12_start:
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 129 16 ]
+        %tmp.62 = "ANOMALY";
+        lputv %status.4 %tmp.62;
+        symbol [ status %status.4 129 16 22 ];
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_128_19_130_12_stop:
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_126_12_130_12_if_end:
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 131 12 ]
+        %tmp.63 = lgetv %accent.3;
+        symbol [ accent %tmp.63 131 26 32 ];
+        lputv %statusColor.5 %tmp.63;
+        symbol [ statusColor %statusColor.5 131 12 23 ];
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_125_21_132_8_stop:
+        goto @C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_125_8_135_8_if_end;
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_125_8_135_8_if_else_false:
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_132_15_135_8_start:
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 133 12 ]
+        %tmp.64 = "SCANNING";
+        lputv %status.4 %tmp.64;
+        symbol [ status %status.4 133 12 18 ];
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 134 12 ]
+        symbol [ _colorDim %tmp.66 134 26 35 ];
+        %tmp.66 = getv ? :_colorDim;
+        lputv %statusColor.5 %tmp.66;
+        symbol [ statusColor %statusColor.5 134 12 23 ];
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_132_15_135_8_stop:
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_125_8_135_8_if_end:
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 137 8 ]
+        %tmp.67 = lgetv %dc;
+        symbol [ dc %tmp.67 137 8 10 ];
+        symbol [ setColor %tmp.68 137 11 19 ];
+        %tmp.68 = getv function %tmp.67 :setColor;
+        %tmp.69 = lgetv %statusColor.5;
+        symbol [ statusColor %tmp.69 137 20 31 ];
+        symbol [ _colorBg %tmp.71 137 33 41 ];
+        %tmp.71 = getv ? :_colorBg;
+        invoke %tmp.67 %tmp.68(%tmp.69, %tmp.71);
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 138 8 ]
+        %tmp.72 = lgetv %dc;
+        symbol [ dc %tmp.72 138 8 10 ];
+        symbol [ drawText %tmp.73 138 11 19 ];
+        %tmp.73 = getv function %tmp.72 :drawText;
+        %tmp.74 = lgetv %cx;
+        symbol [ cx %tmp.74 138 20 22 ];
+        %tmp.75 = 88;
+        symbol [ Gfx %tmp.76 138 28 31 ];
+        %tmp.76 = getm $.Toybox.Graphics;
+        symbol [ FONT_XTINY %tmp.77 138 32 42 ];
+        %tmp.77 = getv %tmp.76 :FONT_XTINY;
+        %tmp.78 = lgetv %status.4;
+        symbol [ status %tmp.78 138 44 50 ];
+        %tmp.79 = self;
+        symbol [ centered %tmp.80 138 52 60 ];
+        %tmp.80 = getv function %tmp.79 :centered;
+        %tmp.81 = invoke %tmp.79 %tmp.80();
+        invoke %tmp.72 %tmp.73(%tmp.74, %tmp.75, %tmp.77, %tmp.78, %tmp.81);
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 142 8 ]
+        [ "C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_104_65_156_4_start" "C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_104_65_156_4_stop" ]
+        %deltaFont.6 = local;
+        symbol [ deltaFont %deltaFont.6 142 12 21 ];
+        symbol [ Gfx %tmp.82 142 24 27 ];
+        %tmp.82 = getm $.Toybox.Graphics;
+        symbol [ FONT_NUMBER_MILD %tmp.83 142 28 44 ];
+        %tmp.83 = getv %tmp.82 :FONT_NUMBER_MILD;
+        lputv %deltaFont.6 %tmp.83;
+        symbol [ deltaFont %deltaFont.6 142 12 21 ];
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 143 8 ]
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_143_8_145_8_if_stmt:
+        symbol [ _deltaText %tmp.85 143 12 22 ];
+        %tmp.85 = getv ? :_deltaText;
+        symbol [ length %tmp.86 143 23 29 ];
+        %tmp.86 = getv function %tmp.85 :length;
+        %tmp.87 = invoke %tmp.85 %tmp.86();
+        %tmp.88 = 4;
+        %tmp.89 = gt %tmp.87 %tmp.88;
+        bf %tmp.89 @C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_143_8_145_8_if_end;
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_143_8_145_8_if_true:
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_143_37_145_8_start:
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 144 12 ]
+        symbol [ Gfx %tmp.90 144 24 27 ];
+        %tmp.90 = getm $.Toybox.Graphics;
+        symbol [ FONT_LARGE %tmp.91 144 28 38 ];
+        %tmp.91 = getv %tmp.90 :FONT_LARGE;
+        lputv %deltaFont.6 %tmp.91;
+        symbol [ deltaFont %deltaFont.6 144 12 21 ];
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_143_37_145_8_stop:
+        goto @C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_143_8_145_8_if_end;
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_143_8_145_8_if_end:
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 147 8 ]
+        %tmp.92 = lgetv %dc;
+        symbol [ dc %tmp.92 147 8 10 ];
+        symbol [ setColor %tmp.93 147 11 19 ];
+        %tmp.93 = getv function %tmp.92 :setColor;
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_147_20_147_39_begin:
+        %tmp.94 = lgetv %anomaly.1;
+        symbol [ anomaly %tmp.94 147 20 27 ];
+        bf %tmp.94 @C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_147_20_147_39_else_false;
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_147_20_147_39_true:
+        %tmp.95 = lgetv %accent.3;
+        symbol [ accent %tmp.95 147 30 36 ];
+        push %tmp.95;
+        goto @C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_147_20_147_39_end;
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_147_20_147_39_else_false:
+        symbol [ _colorText %tmp.97 147 39 49 ];
+        %tmp.97 = getv ? :_colorText;
+        push %tmp.97;
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_147_20_147_39_end:
+        %tmp.98 = phi [%tmp.94 @C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_147_20_147_39_begin] [%tmp.95 @C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_147_20_147_39_true] [%tmp.97 @C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_147_20_147_39_else_false] [%tmp.98 @C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_147_20_147_39_end];
+        symbol [ _colorBg %tmp.100 147 51 59 ];
+        %tmp.100 = getv ? :_colorBg;
+        invoke %tmp.92 %tmp.93(%tmp.98, %tmp.100);
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 148 8 ]
+        %tmp.101 = lgetv %dc;
+        symbol [ dc %tmp.101 148 8 10 ];
+        symbol [ drawText %tmp.102 148 11 19 ];
+        %tmp.102 = getv function %tmp.101 :drawText;
+        %tmp.103 = lgetv %cx;
+        symbol [ cx %tmp.103 148 20 22 ];
+        %tmp.104 = 190;
+        %tmp.105 = lgetv %deltaFont.6;
+        symbol [ deltaFont %tmp.105 148 29 38 ];
+        symbol [ _deltaText %tmp.107 148 40 50 ];
+        %tmp.107 = getv ? :_deltaText;
+        %tmp.108 = self;
+        symbol [ centered %tmp.109 148 52 60 ];
+        %tmp.109 = getv function %tmp.108 :centered;
+        %tmp.110 = invoke %tmp.108 %tmp.109();
+        invoke %tmp.101 %tmp.102(%tmp.103, %tmp.104, %tmp.105, %tmp.107, %tmp.110);
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 150 8 ]
+        %tmp.111 = lgetv %dc;
+        symbol [ dc %tmp.111 150 8 10 ];
+        symbol [ setColor %tmp.112 150 11 19 ];
+        %tmp.112 = getv function %tmp.111 :setColor;
+        symbol [ _colorDim %tmp.114 150 20 29 ];
+        %tmp.114 = getv ? :_colorDim;
+        symbol [ _colorBg %tmp.116 150 31 39 ];
+        %tmp.116 = getv ? :_colorBg;
+        invoke %tmp.111 %tmp.112(%tmp.114, %tmp.116);
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 151 8 ]
+        %tmp.117 = lgetv %dc;
+        symbol [ dc %tmp.117 151 8 10 ];
+        symbol [ drawText %tmp.118 151 11 19 ];
+        %tmp.118 = getv function %tmp.117 :drawText;
+        %tmp.119 = lgetv %cx;
+        symbol [ cx %tmp.119 151 20 22 ];
+        %tmp.120 = 254;
+        symbol [ Gfx %tmp.121 151 29 32 ];
+        %tmp.121 = getm $.Toybox.Graphics;
+        symbol [ FONT_TINY %tmp.122 151 33 42 ];
+        %tmp.122 = getv %tmp.121 :FONT_TINY;
+        %tmp.123 = "mG";
+        %tmp.124 = self;
+        symbol [ centered %tmp.125 151 50 58 ];
+        %tmp.125 = getv function %tmp.124 :centered;
+        %tmp.126 = invoke %tmp.124 %tmp.125();
+        invoke %tmp.117 %tmp.118(%tmp.119, %tmp.120, %tmp.122, %tmp.123, %tmp.126);
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 152 8 ]
+        %tmp.127 = lgetv %dc;
+        symbol [ dc %tmp.127 152 8 10 ];
+        symbol [ drawText %tmp.128 152 11 19 ];
+        %tmp.128 = getv function %tmp.127 :drawText;
+        %tmp.129 = lgetv %cx;
+        symbol [ cx %tmp.129 152 20 22 ];
+        %tmp.130 = 290;
+        symbol [ Gfx %tmp.131 152 29 32 ];
+        %tmp.131 = getm $.Toybox.Graphics;
+        symbol [ FONT_XTINY %tmp.132 152 33 43 ];
+        %tmp.132 = getv %tmp.131 :FONT_XTINY;
+        symbol [ _thresholdLine %tmp.134 152 45 59 ];
+        %tmp.134 = getv ? :_thresholdLine;
+        %tmp.135 = self;
+        symbol [ centered %tmp.136 152 61 69 ];
+        %tmp.136 = getv function %tmp.135 :centered;
+        %tmp.137 = invoke %tmp.135 %tmp.136();
+        invoke %tmp.127 %tmp.128(%tmp.129, %tmp.130, %tmp.132, %tmp.134, %tmp.137);
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 154 8 ]
+        %tmp.138 = lgetv %dc;
+        symbol [ dc %tmp.138 154 8 10 ];
+        symbol [ setColor %tmp.139 154 11 19 ];
+        %tmp.139 = getv function %tmp.138 :setColor;
+        symbol [ _colorHint %tmp.141 154 20 30 ];
+        %tmp.141 = getv ? :_colorHint;
+        symbol [ _colorBg %tmp.143 154 32 40 ];
+        %tmp.143 = getv ? :_colorBg;
+        invoke %tmp.138 %tmp.139(%tmp.141, %tmp.143);
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 155 8 ]
+        %tmp.144 = lgetv %dc;
+        symbol [ dc %tmp.144 155 8 10 ];
+        symbol [ drawText %tmp.145 155 11 19 ];
+        %tmp.145 = getv function %tmp.144 :drawText;
+        %tmp.146 = lgetv %cx;
+        symbol [ cx %tmp.146 155 20 22 ];
+        %tmp.147 = 326;
+        symbol [ Gfx %tmp.148 155 29 32 ];
+        %tmp.148 = getm $.Toybox.Graphics;
+        symbol [ FONT_XTINY %tmp.149 155 33 43 ];
+        %tmp.149 = getv %tmp.148 :FONT_XTINY;
+        %tmp.150 = "TAP TO RECAL";
+        %tmp.151 = self;
+        symbol [ centered %tmp.152 155 61 69 ];
+        %tmp.152 = getv function %tmp.151 :centered;
+        %tmp.153 = invoke %tmp.151 %tmp.152();
+        invoke %tmp.144 %tmp.145(%tmp.146, %tmp.147, %tmp.149, %tmp.150, %tmp.153);
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_104_65_156_4_stop:
+    }
+    [ @file = "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc"; @line = 161; @symbol_functiondef = [drawCalibration,161,21,36]; @symbol_param<0> = [dc,161,37,39]; @symbol_param<0>_type<0> = [Gfx,161,43,46]; @symbol_param<0>_type<1> = [Dc,161,47,49]; @symbol_param<1> = [cx,161,51,53]; @symbol_param<2> = [cy,161,55,57]; @symbol_param<3> = [now,161,59,62]; ]
+    private
+    function drawCalibration(dc as Gfx.Dc, cx, cy, now) as Void {
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_161_72_187_4_start:
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 162 8 ]
+        %tmp.1 = self;
+        symbol [ drawFrame %tmp.2 162 8 17 ];
+        %tmp.2 = getv function %tmp.1 :drawFrame;
+        %tmp.3 = lgetv %dc;
+        symbol [ dc %tmp.3 162 18 20 ];
+        %tmp.4 = lgetv %cx;
+        symbol [ cx %tmp.4 162 22 24 ];
+        %tmp.5 = lgetv %cy;
+        symbol [ cy %tmp.5 162 26 28 ];
+        invoke %tmp.1 %tmp.2(%tmp.3, %tmp.4, %tmp.5);
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 164 8 ]
+        [ "C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_161_72_187_4_start" "C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_161_72_187_4_stop" ]
+        %progress.1 = local;
+        symbol [ progress %progress.1 164 12 20 ];
+        symbol [ _delegate %tmp.7 164 23 32 ];
+        %tmp.7 = getv ? :_delegate;
+        symbol [ getCalibrationProgress %tmp.8 164 33 55 ];
+        %tmp.8 = getv function %tmp.7 :getCalibrationProgress;
+        %tmp.9 = invoke %tmp.7 %tmp.8();
+        lputv %progress.1 %tmp.9;
+        symbol [ progress %progress.1 164 12 20 ];
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 165 8 ]
+        %tmp.10 = lgetv %dc;
+        symbol [ dc %tmp.10 165 8 10 ];
+        symbol [ setPenWidth %tmp.11 165 11 22 ];
+        %tmp.11 = getv function %tmp.10 :setPenWidth;
+        %tmp.12 = 8;
+        invoke %tmp.10 %tmp.11(%tmp.12);
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 166 8 ]
+        %tmp.13 = lgetv %dc;
+        symbol [ dc %tmp.13 166 8 10 ];
+        symbol [ setColor %tmp.14 166 11 19 ];
+        %tmp.14 = getv function %tmp.13 :setColor;
+        symbol [ _colorCyan %tmp.16 166 20 30 ];
+        %tmp.16 = getv ? :_colorCyan;
+        symbol [ _colorBg %tmp.18 166 32 40 ];
+        %tmp.18 = getv ? :_colorBg;
+        invoke %tmp.13 %tmp.14(%tmp.16, %tmp.18);
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 167 8 ]
+        %tmp.19 = self;
+        symbol [ drawGaugeArc %tmp.20 167 8 20 ];
+        %tmp.20 = getv function %tmp.19 :drawGaugeArc;
+        %tmp.21 = lgetv %dc;
+        symbol [ dc %tmp.21 167 21 23 ];
+        %tmp.22 = lgetv %cx;
+        symbol [ cx %tmp.22 167 25 27 ];
+        %tmp.23 = lgetv %cy;
+        symbol [ cy %tmp.23 167 29 31 ];
+        %tmp.24 = 158;
+        %tmp.25 = lgetv %progress.1;
+        symbol [ progress %tmp.25 167 38 46 ];
+        invoke %tmp.19 %tmp.20(%tmp.21, %tmp.22, %tmp.23, %tmp.24, %tmp.25);
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 168 8 ]
+        %tmp.26 = self;
+        symbol [ drawArcEndDot %tmp.27 168 8 21 ];
+        %tmp.27 = getv function %tmp.26 :drawArcEndDot;
+        %tmp.28 = lgetv %dc;
+        symbol [ dc %tmp.28 168 22 24 ];
+        %tmp.29 = lgetv %cx;
+        symbol [ cx %tmp.29 168 26 28 ];
+        %tmp.30 = lgetv %cy;
+        symbol [ cy %tmp.30 168 30 32 ];
+        %tmp.31 = 158;
+        %tmp.32 = lgetv %progress.1;
+        symbol [ progress %tmp.32 168 39 47 ];
+        symbol [ _colorCyan %tmp.34 168 49 59 ];
+        %tmp.34 = getv ? :_colorCyan;
+        invoke %tmp.26 %tmp.27(%tmp.28, %tmp.29, %tmp.30, %tmp.31, %tmp.32, %tmp.34);
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 170 8 ]
+        %tmp.35 = self;
+        symbol [ drawTitle %tmp.36 170 8 17 ];
+        %tmp.36 = getv function %tmp.35 :drawTitle;
+        %tmp.37 = lgetv %dc;
+        symbol [ dc %tmp.37 170 18 20 ];
+        %tmp.38 = lgetv %cx;
+        symbol [ cx %tmp.38 170 22 24 ];
+        invoke %tmp.35 %tmp.36(%tmp.37, %tmp.38);
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 172 8 ]
+        %tmp.39 = lgetv %dc;
+        symbol [ dc %tmp.39 172 8 10 ];
+        symbol [ setColor %tmp.40 172 11 19 ];
+        %tmp.40 = getv function %tmp.39 :setColor;
+        symbol [ _colorDim %tmp.42 172 20 29 ];
+        %tmp.42 = getv ? :_colorDim;
+        symbol [ _colorBg %tmp.44 172 31 39 ];
+        %tmp.44 = getv ? :_colorBg;
+        invoke %tmp.39 %tmp.40(%tmp.42, %tmp.44);
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 173 8 ]
+        %tmp.45 = lgetv %dc;
+        symbol [ dc %tmp.45 173 8 10 ];
+        symbol [ drawText %tmp.46 173 11 19 ];
+        %tmp.46 = getv function %tmp.45 :drawText;
+        %tmp.47 = lgetv %cx;
+        symbol [ cx %tmp.47 173 20 22 ];
+        %tmp.48 = 126;
+        symbol [ Gfx %tmp.49 173 29 32 ];
+        %tmp.49 = getm $.Toybox.Graphics;
+        symbol [ FONT_SMALL %tmp.50 173 33 43 ];
+        %tmp.50 = getv %tmp.49 :FONT_SMALL;
+        %tmp.51 = "CALIBRATING";
+        %tmp.52 = self;
+        symbol [ centered %tmp.53 173 60 68 ];
+        %tmp.53 = getv function %tmp.52 :centered;
+        %tmp.54 = invoke %tmp.52 %tmp.53();
+        invoke %tmp.45 %tmp.46(%tmp.47, %tmp.48, %tmp.50, %tmp.51, %tmp.54);
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 175 8 ]
+        [ "C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_161_72_187_4_start" "C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_161_72_187_4_stop" ]
+        %percent.2 = local;
+        symbol [ percent %percent.2 175 12 19 ];
+        %tmp.55 = lgetv %progress.1;
+        symbol [ progress %tmp.55 175 23 31 ];
+        %tmp.56 = 100.0;
+        %tmp.57 = mul %tmp.55 %tmp.56;
+        symbol [ toNumber %tmp.58 175 41 49 ];
+        %tmp.58 = getv function %tmp.57 :toNumber;
+        %tmp.59 = invoke %tmp.57 %tmp.58();
+        lputv %percent.2 %tmp.59;
+        symbol [ percent %percent.2 175 12 19 ];
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 176 8 ]
+        [ "C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_161_72_187_4_start" "C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_161_72_187_4_stop" ]
+        %percentText.3 = local;
+        symbol [ percentText %percentText.3 176 12 23 ];
+        %tmp.60 = lgetv %percent.2;
+        symbol [ percent %tmp.60 176 26 33 ];
+        symbol [ toString %tmp.61 176 34 42 ];
+        %tmp.61 = getv function %tmp.60 :toString;
+        %tmp.62 = invoke %tmp.60 %tmp.61();
+        %tmp.63 = "%";
+        %tmp.64 = add %tmp.62 %tmp.63;
+        lputv %percentText.3 %tmp.64;
+        symbol [ percentText %percentText.3 176 12 23 ];
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 178 8 ]
+        %tmp.65 = lgetv %dc;
+        symbol [ dc %tmp.65 178 8 10 ];
+        symbol [ setColor %tmp.66 178 11 19 ];
+        %tmp.66 = getv function %tmp.65 :setColor;
+        symbol [ _colorText %tmp.68 178 20 30 ];
+        %tmp.68 = getv ? :_colorText;
+        symbol [ _colorBg %tmp.70 178 32 40 ];
+        %tmp.70 = getv ? :_colorBg;
+        invoke %tmp.65 %tmp.66(%tmp.68, %tmp.70);
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 179 8 ]
+        %tmp.71 = lgetv %dc;
+        symbol [ dc %tmp.71 179 8 10 ];
+        symbol [ drawText %tmp.72 179 11 19 ];
+        %tmp.72 = getv function %tmp.71 :drawText;
+        %tmp.73 = lgetv %cx;
+        symbol [ cx %tmp.73 179 20 22 ];
+        %tmp.74 = 196;
+        symbol [ Gfx %tmp.75 179 29 32 ];
+        %tmp.75 = getm $.Toybox.Graphics;
+        symbol [ FONT_LARGE %tmp.76 179 33 43 ];
+        %tmp.76 = getv %tmp.75 :FONT_LARGE;
+        %tmp.77 = lgetv %percentText.3;
+        symbol [ percentText %tmp.77 179 45 56 ];
+        %tmp.78 = self;
+        symbol [ centered %tmp.79 179 58 66 ];
+        %tmp.79 = getv function %tmp.78 :centered;
+        %tmp.80 = invoke %tmp.78 %tmp.79();
+        invoke %tmp.71 %tmp.72(%tmp.73, %tmp.74, %tmp.76, %tmp.77, %tmp.80);
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 180 8 ]
+        %tmp.81 = lgetv %dc;
+        symbol [ dc %tmp.81 180 8 10 ];
+        symbol [ drawText %tmp.82 180 11 19 ];
+        %tmp.82 = getv function %tmp.81 :drawText;
+        %tmp.83 = lgetv %cx;
+        symbol [ cx %tmp.83 180 20 22 ];
+        %tmp.84 = 260;
+        symbol [ Gfx %tmp.85 180 29 32 ];
+        %tmp.85 = getm $.Toybox.Graphics;
+        symbol [ FONT_TINY %tmp.86 180 33 42 ];
+        %tmp.86 = getv %tmp.85 :FONT_TINY;
+        %tmp.87 = "HOLD STILL";
+        %tmp.88 = self;
+        symbol [ centered %tmp.89 180 58 66 ];
+        %tmp.89 = getv function %tmp.88 :centered;
+        %tmp.90 = invoke %tmp.88 %tmp.89();
+        invoke %tmp.81 %tmp.82(%tmp.83, %tmp.84, %tmp.86, %tmp.87, %tmp.90);
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 182 8 ]
+        %tmp.91 = lgetv %dc;
+        symbol [ dc %tmp.91 182 8 10 ];
+        symbol [ setColor %tmp.92 182 11 19 ];
+        %tmp.92 = getv function %tmp.91 :setColor;
+        symbol [ _colorDim %tmp.94 182 20 29 ];
+        %tmp.94 = getv ? :_colorDim;
+        symbol [ _colorBg %tmp.96 182 31 39 ];
+        %tmp.96 = getv ? :_colorBg;
+        invoke %tmp.91 %tmp.92(%tmp.94, %tmp.96);
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 183 8 ]
+        %tmp.97 = lgetv %dc;
+        symbol [ dc %tmp.97 183 8 10 ];
+        symbol [ drawText %tmp.98 183 11 19 ];
+        %tmp.98 = getv function %tmp.97 :drawText;
+        %tmp.99 = lgetv %cx;
+        symbol [ cx %tmp.99 183 20 22 ];
+        %tmp.100 = 296;
+        symbol [ Gfx %tmp.101 183 29 32 ];
+        %tmp.101 = getm $.Toybox.Graphics;
+        symbol [ FONT_XTINY %tmp.102 183 33 43 ];
+        %tmp.102 = getv %tmp.101 :FONT_XTINY;
+        %tmp.103 = "AWAY FROM METAL";
+        %tmp.104 = self;
+        symbol [ centered %tmp.105 183 64 72 ];
+        %tmp.105 = getv function %tmp.104 :centered;
+        %tmp.106 = invoke %tmp.104 %tmp.105();
+        invoke %tmp.97 %tmp.98(%tmp.99, %tmp.100, %tmp.102, %tmp.103, %tmp.106);
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 185 8 ]
+        %tmp.107 = lgetv %dc;
+        symbol [ dc %tmp.107 185 8 10 ];
+        symbol [ setColor %tmp.108 185 11 19 ];
+        %tmp.108 = getv function %tmp.107 :setColor;
+        symbol [ _colorHint %tmp.110 185 20 30 ];
+        %tmp.110 = getv ? :_colorHint;
+        symbol [ _colorBg %tmp.112 185 32 40 ];
+        %tmp.112 = getv ? :_colorBg;
+        invoke %tmp.107 %tmp.108(%tmp.110, %tmp.112);
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 186 8 ]
+        %tmp.113 = lgetv %dc;
+        symbol [ dc %tmp.113 186 8 10 ];
+        symbol [ drawText %tmp.114 186 11 19 ];
+        %tmp.114 = getv function %tmp.113 :drawText;
+        %tmp.115 = lgetv %cx;
+        symbol [ cx %tmp.115 186 20 22 ];
+        %tmp.116 = 328;
+        symbol [ Gfx %tmp.117 186 29 32 ];
+        %tmp.117 = getm $.Toybox.Graphics;
+        symbol [ FONT_XTINY %tmp.118 186 33 43 ];
+        %tmp.118 = getv %tmp.117 :FONT_XTINY;
+        %tmp.119 = "TAP TO RESTART";
+        %tmp.120 = self;
+        symbol [ centered %tmp.121 186 63 71 ];
+        %tmp.121 = getv function %tmp.120 :centered;
+        %tmp.122 = invoke %tmp.120 %tmp.121();
+        invoke %tmp.113 %tmp.114(%tmp.115, %tmp.116, %tmp.118, %tmp.119, %tmp.122);
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_161_72_187_4_stop:
+    }
+    [ @file = "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc"; @line = 192; @symbol_functiondef = [drawSensorLost,192,21,35]; @symbol_param<0> = [dc,192,36,38]; @symbol_param<0>_type<0> = [Gfx,192,42,45]; @symbol_param<0>_type<1> = [Dc,192,46,48]; @symbol_param<1> = [cx,192,50,52]; @symbol_param<2> = [cy,192,54,56]; @symbol_param<3> = [now,192,58,61]; ]
+    private
+    function drawSensorLost(dc as Gfx.Dc, cx, cy, now) as Void {
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_192_71_212_4_start:
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 193 8 ]
+        %tmp.1 = self;
+        symbol [ drawFrame %tmp.2 193 8 17 ];
+        %tmp.2 = getv function %tmp.1 :drawFrame;
+        %tmp.3 = lgetv %dc;
+        symbol [ dc %tmp.3 193 18 20 ];
+        %tmp.4 = lgetv %cx;
+        symbol [ cx %tmp.4 193 22 24 ];
+        %tmp.5 = lgetv %cy;
+        symbol [ cy %tmp.5 193 26 28 ];
+        invoke %tmp.1 %tmp.2(%tmp.3, %tmp.4, %tmp.5);
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 195 8 ]
+        [ "C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_192_71_212_4_start" "C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_192_71_212_4_stop" ]
+        %phase.1 = local;
+        symbol [ phase %phase.1 195 12 17 ];
+        %tmp.6 = lgetv %now;
+        symbol [ now %tmp.6 195 22 25 ];
+        %tmp.7 = 1600;
+        %tmp.8 = mod %tmp.6 %tmp.7;
+        symbol [ toFloat %tmp.9 195 34 41 ];
+        %tmp.9 = getv function %tmp.8 :toFloat;
+        %tmp.10 = invoke %tmp.8 %tmp.9();
+        %tmp.11 = 1600.0;
+        %tmp.12 = div %tmp.10 %tmp.11;
+        lputv %phase.1 %tmp.12;
+        symbol [ phase %phase.1 195 12 17 ];
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 196 8 ]
+        [ "C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_192_71_212_4_start" "C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_192_71_212_4_stop" ]
+        %radius.2 = local;
+        symbol [ radius %radius.2 196 12 18 ];
+        %tmp.13 = 118.0;
+        %tmp.14 = 27.0;
+        %tmp.15 = lgetv %phase.1;
+        symbol [ phase %tmp.15 196 37 42 ];
+        %tmp.16 = mul %tmp.14 %tmp.15;
+        %tmp.17 = add %tmp.13 %tmp.16;
+        symbol [ toNumber %tmp.18 196 44 52 ];
+        %tmp.18 = getv function %tmp.17 :toNumber;
+        %tmp.19 = invoke %tmp.17 %tmp.18();
+        lputv %radius.2 %tmp.19;
+        symbol [ radius %radius.2 196 12 18 ];
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 198 8 ]
+        %tmp.20 = lgetv %dc;
+        symbol [ dc %tmp.20 198 8 10 ];
+        symbol [ setColor %tmp.21 198 11 19 ];
+        %tmp.21 = getv function %tmp.20 :setColor;
+        symbol [ _colorRedDim %tmp.23 198 20 32 ];
+        %tmp.23 = getv ? :_colorRedDim;
+        symbol [ _colorBg %tmp.25 198 34 42 ];
+        %tmp.25 = getv ? :_colorBg;
+        invoke %tmp.20 %tmp.21(%tmp.23, %tmp.25);
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 199 8 ]
+        %tmp.26 = lgetv %dc;
+        symbol [ dc %tmp.26 199 8 10 ];
+        symbol [ setPenWidth %tmp.27 199 11 22 ];
+        %tmp.27 = getv function %tmp.26 :setPenWidth;
+        %tmp.28 = 1;
+        invoke %tmp.26 %tmp.27(%tmp.28);
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 200 8 ]
+        %tmp.29 = self;
+        symbol [ drawGaugeArc %tmp.30 200 8 20 ];
+        %tmp.30 = getv function %tmp.29 :drawGaugeArc;
+        %tmp.31 = lgetv %dc;
+        symbol [ dc %tmp.31 200 21 23 ];
+        %tmp.32 = lgetv %cx;
+        symbol [ cx %tmp.32 200 25 27 ];
+        %tmp.33 = lgetv %cy;
+        symbol [ cy %tmp.33 200 29 31 ];
+        %tmp.34 = lgetv %radius.2;
+        symbol [ radius %tmp.34 200 33 39 ];
+        %tmp.35 = 1.0;
+        invoke %tmp.29 %tmp.30(%tmp.31, %tmp.32, %tmp.33, %tmp.34, %tmp.35);
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 202 8 ]
+        %tmp.36 = self;
+        symbol [ drawTitle %tmp.37 202 8 17 ];
+        %tmp.37 = getv function %tmp.36 :drawTitle;
+        %tmp.38 = lgetv %dc;
+        symbol [ dc %tmp.38 202 18 20 ];
+        %tmp.39 = lgetv %cx;
+        symbol [ cx %tmp.39 202 22 24 ];
+        invoke %tmp.36 %tmp.37(%tmp.38, %tmp.39);
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 204 8 ]
+        %tmp.40 = lgetv %dc;
+        symbol [ dc %tmp.40 204 8 10 ];
+        symbol [ setColor %tmp.41 204 11 19 ];
+        %tmp.41 = getv function %tmp.40 :setColor;
+        symbol [ _colorRed %tmp.43 204 20 29 ];
+        %tmp.43 = getv ? :_colorRed;
+        symbol [ _colorBg %tmp.45 204 31 39 ];
+        %tmp.45 = getv ? :_colorBg;
+        invoke %tmp.40 %tmp.41(%tmp.43, %tmp.45);
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 205 8 ]
+        %tmp.46 = lgetv %dc;
+        symbol [ dc %tmp.46 205 8 10 ];
+        symbol [ drawText %tmp.47 205 11 19 ];
+        %tmp.47 = getv function %tmp.46 :drawText;
+        %tmp.48 = lgetv %cx;
+        symbol [ cx %tmp.48 205 20 22 ];
+        %tmp.49 = 164;
+        symbol [ Gfx %tmp.50 205 29 32 ];
+        %tmp.50 = getm $.Toybox.Graphics;
+        symbol [ FONT_MEDIUM %tmp.51 205 33 44 ];
+        %tmp.51 = getv %tmp.50 :FONT_MEDIUM;
+        %tmp.52 = "SENSOR LOST";
+        %tmp.53 = self;
+        symbol [ centered %tmp.54 205 61 69 ];
+        %tmp.54 = getv function %tmp.53 :centered;
+        %tmp.55 = invoke %tmp.53 %tmp.54();
+        invoke %tmp.46 %tmp.47(%tmp.48, %tmp.49, %tmp.51, %tmp.52, %tmp.55);
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 207 8 ]
+        %tmp.56 = lgetv %dc;
+        symbol [ dc %tmp.56 207 8 10 ];
+        symbol [ setColor %tmp.57 207 11 19 ];
+        %tmp.57 = getv function %tmp.56 :setColor;
+        symbol [ _colorDim %tmp.59 207 20 29 ];
+        %tmp.59 = getv ? :_colorDim;
+        symbol [ _colorBg %tmp.61 207 31 39 ];
+        %tmp.61 = getv ? :_colorBg;
+        invoke %tmp.56 %tmp.57(%tmp.59, %tmp.61);
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 208 8 ]
+        %tmp.62 = lgetv %dc;
+        symbol [ dc %tmp.62 208 8 10 ];
+        symbol [ drawText %tmp.63 208 11 19 ];
+        %tmp.63 = getv function %tmp.62 :drawText;
+        %tmp.64 = lgetv %cx;
+        symbol [ cx %tmp.64 208 20 22 ];
+        %tmp.65 = 236;
+        symbol [ Gfx %tmp.66 208 29 32 ];
+        %tmp.66 = getm $.Toybox.Graphics;
+        symbol [ FONT_TINY %tmp.67 208 33 42 ];
+        %tmp.67 = getv %tmp.66 :FONT_TINY;
+        %tmp.68 = "RETRYING...";
+        %tmp.69 = self;
+        symbol [ centered %tmp.70 208 59 67 ];
+        %tmp.70 = getv function %tmp.69 :centered;
+        %tmp.71 = invoke %tmp.69 %tmp.70();
+        invoke %tmp.62 %tmp.63(%tmp.64, %tmp.65, %tmp.67, %tmp.68, %tmp.71);
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 210 8 ]
+        %tmp.72 = lgetv %dc;
+        symbol [ dc %tmp.72 210 8 10 ];
+        symbol [ setColor %tmp.73 210 11 19 ];
+        %tmp.73 = getv function %tmp.72 :setColor;
+        symbol [ _colorHint %tmp.75 210 20 30 ];
+        %tmp.75 = getv ? :_colorHint;
+        symbol [ _colorBg %tmp.77 210 32 40 ];
+        %tmp.77 = getv ? :_colorBg;
+        invoke %tmp.72 %tmp.73(%tmp.75, %tmp.77);
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 211 8 ]
+        %tmp.78 = lgetv %dc;
+        symbol [ dc %tmp.78 211 8 10 ];
+        symbol [ drawText %tmp.79 211 11 19 ];
+        %tmp.79 = getv function %tmp.78 :drawText;
+        %tmp.80 = lgetv %cx;
+        symbol [ cx %tmp.80 211 20 22 ];
+        %tmp.81 = 326;
+        symbol [ Gfx %tmp.82 211 29 32 ];
+        %tmp.82 = getm $.Toybox.Graphics;
+        symbol [ FONT_XTINY %tmp.83 211 33 43 ];
+        %tmp.83 = getv %tmp.82 :FONT_XTINY;
+        %tmp.84 = "TAP TO RETRY";
+        %tmp.85 = self;
+        symbol [ centered %tmp.86 211 61 69 ];
+        %tmp.86 = getv function %tmp.85 :centered;
+        %tmp.87 = invoke %tmp.85 %tmp.86();
+        invoke %tmp.78 %tmp.79(%tmp.80, %tmp.81, %tmp.83, %tmp.84, %tmp.87);
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_192_71_212_4_stop:
+    }
+    [ @file = "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc"; @line = 217; @symbol_functiondef = [drawFrame,217,21,30]; @symbol_param<0> = [dc,217,31,33]; @symbol_param<0>_type<0> = [Gfx,217,37,40]; @symbol_param<0>_type<1> = [Dc,217,41,43]; @symbol_param<1> = [cx,217,45,47]; @symbol_param<2> = [cy,217,49,51]; ]
+    private
+    function drawFrame(dc as Gfx.Dc, cx, cy) as Void {
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_217_61_248_4_start:
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 218 8 ]
+        %tmp.1 = lgetv %dc;
+        symbol [ dc %tmp.1 218 8 10 ];
+        symbol [ setPenWidth %tmp.2 218 11 22 ];
+        %tmp.2 = getv function %tmp.1 :setPenWidth;
+        %tmp.3 = 1;
+        invoke %tmp.1 %tmp.2(%tmp.3);
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 219 8 ]
+        %tmp.4 = lgetv %dc;
+        symbol [ dc %tmp.4 219 8 10 ];
+        symbol [ setColor %tmp.5 219 11 19 ];
+        %tmp.5 = getv function %tmp.4 :setColor;
+        symbol [ _colorEdge %tmp.7 219 20 30 ];
+        %tmp.7 = getv ? :_colorEdge;
+        symbol [ _colorBg %tmp.9 219 32 40 ];
+        %tmp.9 = getv ? :_colorBg;
+        invoke %tmp.4 %tmp.5(%tmp.7, %tmp.9);
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 222 8 ]
+        %tmp.10 = lgetv %dc;
+        symbol [ dc %tmp.10 222 8 10 ];
+        symbol [ drawCircle %tmp.11 222 11 21 ];
+        %tmp.11 = getv function %tmp.10 :drawCircle;
+        %tmp.12 = lgetv %cx;
+        symbol [ cx %tmp.12 222 22 24 ];
+        %tmp.13 = lgetv %cy;
+        symbol [ cy %tmp.13 222 26 28 ];
+        %tmp.14 = 181;
+        invoke %tmp.10 %tmp.11(%tmp.12, %tmp.13, %tmp.14);
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 226 8 ]
+        %tmp.15 = self;
+        symbol [ drawGaugeArc %tmp.16 226 8 20 ];
+        %tmp.16 = getv function %tmp.15 :drawGaugeArc;
+        %tmp.17 = lgetv %dc;
+        symbol [ dc %tmp.17 226 21 23 ];
+        %tmp.18 = lgetv %cx;
+        symbol [ cx %tmp.18 226 25 27 ];
+        %tmp.19 = lgetv %cy;
+        symbol [ cy %tmp.19 226 29 31 ];
+        %tmp.20 = 134;
+        %tmp.21 = 1.0;
+        invoke %tmp.15 %tmp.16(%tmp.17, %tmp.18, %tmp.19, %tmp.20, %tmp.21);
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 227 8 ]
+        %tmp.22 = self;
+        symbol [ drawGaugeArc %tmp.23 227 8 20 ];
+        %tmp.23 = getv function %tmp.22 :drawGaugeArc;
+        %tmp.24 = lgetv %dc;
+        symbol [ dc %tmp.24 227 21 23 ];
+        %tmp.25 = lgetv %cx;
+        symbol [ cx %tmp.25 227 25 27 ];
+        %tmp.26 = lgetv %cy;
+        symbol [ cy %tmp.26 227 29 31 ];
+        %tmp.27 = 112;
+        %tmp.28 = 1.0;
+        invoke %tmp.22 %tmp.23(%tmp.24, %tmp.25, %tmp.26, %tmp.27, %tmp.28);
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 230 8 ]
+        for @C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_230_8_242_8_for_test @C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_230_8_242_8_for_incr @C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_230_8_242_8_for_end;
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_230_8_242_8_for_init:
+        [ "C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_230_8_242_8_for_begin" "C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_230_8_242_8_for_end" ]
+        %i.1 = local;
+        symbol [ i %i.1 230 17 18 ];
+        %tmp.29 = 0;
+        lputv %i.1 %tmp.29;
+        symbol [ i %i.1 230 17 18 ];
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_230_8_242_8_for_test:
+        %tmp.30 = lgetv %i.1;
+        symbol [ i %tmp.30 230 24 25 ];
+        %tmp.31 = 18;
+        %tmp.32 = lte %tmp.30 %tmp.31;
+        bf %tmp.32 @C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_230_8_242_8_for_end;
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_230_8_242_8_for_begin:
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_230_41_242_8_start:
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 231 12 ]
+        [ "C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_230_41_242_8_start" "C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_230_41_242_8_stop" ]
+        %degrees.2 = local;
+        symbol [ degrees %degrees.2 231 16 23 ];
+        %tmp.33 = 45.0;
+        %tmp.34 = lgetv %i.1;
+        symbol [ i %tmp.34 231 33 34 ];
+        %tmp.35 = 15.0;
+        %tmp.36 = mul %tmp.34 %tmp.35;
+        %tmp.37 = sub %tmp.33 %tmp.36;
+        lputv %degrees.2 %tmp.37;
+        symbol [ degrees %degrees.2 231 16 23 ];
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 232 12 ]
+        [ "C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_230_41_242_8_start" "C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_230_41_242_8_stop" ]
+        %radians.3 = local;
+        symbol [ radians %radians.3 232 16 23 ];
+        %tmp.38 = lgetv %degrees.2;
+        symbol [ degrees %tmp.38 232 26 33 ];
+        symbol [ MathModule %tmp.39 232 36 46 ];
+        %tmp.39 = getm $.Toybox.Math;
+        symbol [ PI %tmp.40 232 47 49 ];
+        %tmp.40 = getv %tmp.39 :PI;
+        %tmp.41 = mul %tmp.38 %tmp.40;
+        %tmp.42 = 180.0;
+        %tmp.43 = div %tmp.41 %tmp.42;
+        lputv %radians.3 %tmp.43;
+        symbol [ radians %radians.3 232 16 23 ];
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 233 12 ]
+        [ "C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_230_41_242_8_start" "C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_230_41_242_8_stop" ]
+        %cosValue.4 = local;
+        symbol [ cosValue %cosValue.4 233 16 24 ];
+        symbol [ MathModule %tmp.44 233 27 37 ];
+        %tmp.44 = getm $.Toybox.Math;
+        symbol [ cos %tmp.45 233 38 41 ];
+        %tmp.45 = getv function %tmp.44 :cos;
+        %tmp.46 = lgetv %radians.3;
+        symbol [ radians %tmp.46 233 42 49 ];
+        %tmp.47 = invoke %tmp.44 %tmp.45(%tmp.46);
+        lputv %cosValue.4 %tmp.47;
+        symbol [ cosValue %cosValue.4 233 16 24 ];
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 234 12 ]
+        [ "C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_230_41_242_8_start" "C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_230_41_242_8_stop" ]
+        %sinValue.5 = local;
+        symbol [ sinValue %sinValue.5 234 16 24 ];
+        symbol [ MathModule %tmp.48 234 27 37 ];
+        %tmp.48 = getm $.Toybox.Math;
+        symbol [ sin %tmp.49 234 38 41 ];
+        %tmp.49 = getv function %tmp.48 :sin;
+        %tmp.50 = lgetv %radians.3;
+        symbol [ radians %tmp.50 234 42 49 ];
+        %tmp.51 = invoke %tmp.48 %tmp.49(%tmp.50);
+        lputv %sinValue.5 %tmp.51;
+        symbol [ sinValue %sinValue.5 234 16 24 ];
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 236 12 ]
+        [ "C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_230_41_242_8_start" "C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_230_41_242_8_stop" ]
+        %x1.6 = local;
+        symbol [ x1 %x1.6 236 16 18 ];
+        %tmp.52 = lgetv %cx;
+        symbol [ cx %tmp.52 236 22 24 ];
+        %tmp.53 = lgetv %cosValue.4;
+        symbol [ cosValue %tmp.53 236 27 35 ];
+        %tmp.54 = 168.0;
+        %tmp.55 = mul %tmp.53 %tmp.54;
+        %tmp.56 = add %tmp.52 %tmp.55;
+        symbol [ toNumber %tmp.57 236 45 53 ];
+        %tmp.57 = getv function %tmp.56 :toNumber;
+        %tmp.58 = invoke %tmp.56 %tmp.57();
+        lputv %x1.6 %tmp.58;
+        symbol [ x1 %x1.6 236 16 18 ];
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 237 12 ]
+        [ "C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_230_41_242_8_start" "C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_230_41_242_8_stop" ]
+        %y1.7 = local;
+        symbol [ y1 %y1.7 237 16 18 ];
+        %tmp.59 = lgetv %cy;
+        symbol [ cy %tmp.59 237 22 24 ];
+        %tmp.60 = lgetv %sinValue.5;
+        symbol [ sinValue %tmp.60 237 27 35 ];
+        %tmp.61 = 168.0;
+        %tmp.62 = mul %tmp.60 %tmp.61;
+        %tmp.63 = sub %tmp.59 %tmp.62;
+        symbol [ toNumber %tmp.64 237 45 53 ];
+        %tmp.64 = getv function %tmp.63 :toNumber;
+        %tmp.65 = invoke %tmp.63 %tmp.64();
+        lputv %y1.7 %tmp.65;
+        symbol [ y1 %y1.7 237 16 18 ];
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 238 12 ]
+        [ "C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_230_41_242_8_start" "C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_230_41_242_8_stop" ]
+        %x2.8 = local;
+        symbol [ x2 %x2.8 238 16 18 ];
+        %tmp.66 = lgetv %cx;
+        symbol [ cx %tmp.66 238 22 24 ];
+        %tmp.67 = lgetv %cosValue.4;
+        symbol [ cosValue %tmp.67 238 27 35 ];
+        %tmp.68 = 175.0;
+        %tmp.69 = mul %tmp.67 %tmp.68;
+        %tmp.70 = add %tmp.66 %tmp.69;
+        symbol [ toNumber %tmp.71 238 45 53 ];
+        %tmp.71 = getv function %tmp.70 :toNumber;
+        %tmp.72 = invoke %tmp.70 %tmp.71();
+        lputv %x2.8 %tmp.72;
+        symbol [ x2 %x2.8 238 16 18 ];
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 239 12 ]
+        [ "C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_230_41_242_8_start" "C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_230_41_242_8_stop" ]
+        %y2.9 = local;
+        symbol [ y2 %y2.9 239 16 18 ];
+        %tmp.73 = lgetv %cy;
+        symbol [ cy %tmp.73 239 22 24 ];
+        %tmp.74 = lgetv %sinValue.5;
+        symbol [ sinValue %tmp.74 239 27 35 ];
+        %tmp.75 = 175.0;
+        %tmp.76 = mul %tmp.74 %tmp.75;
+        %tmp.77 = sub %tmp.73 %tmp.76;
+        symbol [ toNumber %tmp.78 239 45 53 ];
+        %tmp.78 = getv function %tmp.77 :toNumber;
+        %tmp.79 = invoke %tmp.77 %tmp.78();
+        lputv %y2.9 %tmp.79;
+        symbol [ y2 %y2.9 239 16 18 ];
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 241 12 ]
+        %tmp.80 = lgetv %dc;
+        symbol [ dc %tmp.80 241 12 14 ];
+        symbol [ drawLine %tmp.81 241 15 23 ];
+        %tmp.81 = getv function %tmp.80 :drawLine;
+        %tmp.82 = lgetv %x1.6;
+        symbol [ x1 %tmp.82 241 24 26 ];
+        %tmp.83 = lgetv %y1.7;
+        symbol [ y1 %tmp.83 241 28 30 ];
+        %tmp.84 = lgetv %x2.8;
+        symbol [ x2 %tmp.84 241 32 34 ];
+        %tmp.85 = lgetv %y2.9;
+        symbol [ y2 %tmp.85 241 36 38 ];
+        invoke %tmp.80 %tmp.81(%tmp.82, %tmp.83, %tmp.84, %tmp.85);
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_230_41_242_8_stop:
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_230_8_242_8_for_incr:
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 230 ]
+        %tmp.86 = lgetv %i.1;
+        symbol [ i %tmp.86 230 33 34 ];
+        %tmp.87 = 1;
+        %tmp.88 = add %tmp.86 %tmp.87;
+        lputv %i.1 %tmp.88;
+        symbol [ i %i.1 230 33 34 ];
+        goto @C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_230_8_242_8_for_test;
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_230_8_242_8_for_end:
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 245 8 ]
+        %tmp.89 = lgetv %dc;
+        symbol [ dc %tmp.89 245 8 10 ];
+        symbol [ setPenWidth %tmp.90 245 11 22 ];
+        %tmp.90 = getv function %tmp.89 :setPenWidth;
+        %tmp.91 = 8;
+        invoke %tmp.89 %tmp.90(%tmp.91);
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 246 8 ]
+        %tmp.92 = lgetv %dc;
+        symbol [ dc %tmp.92 246 8 10 ];
+        symbol [ setColor %tmp.93 246 11 19 ];
+        %tmp.93 = getv function %tmp.92 :setColor;
+        symbol [ _colorTrack %tmp.95 246 20 31 ];
+        %tmp.95 = getv ? :_colorTrack;
+        symbol [ _colorBg %tmp.97 246 33 41 ];
+        %tmp.97 = getv ? :_colorBg;
+        invoke %tmp.92 %tmp.93(%tmp.95, %tmp.97);
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 247 8 ]
+        %tmp.98 = self;
+        symbol [ drawGaugeArc %tmp.99 247 8 20 ];
+        %tmp.99 = getv function %tmp.98 :drawGaugeArc;
+        %tmp.100 = lgetv %dc;
+        symbol [ dc %tmp.100 247 21 23 ];
+        %tmp.101 = lgetv %cx;
+        symbol [ cx %tmp.101 247 25 27 ];
+        %tmp.102 = lgetv %cy;
+        symbol [ cy %tmp.102 247 29 31 ];
+        %tmp.103 = 158;
+        %tmp.104 = 1.0;
+        invoke %tmp.98 %tmp.99(%tmp.100, %tmp.101, %tmp.102, %tmp.103, %tmp.104);
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_217_61_248_4_stop:
+    }
+    [ @file = "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc"; @line = 253; @symbol_functiondef = [drawReactiveRings,253,21,38]; @symbol_param<0> = [dc,253,39,41]; @symbol_param<0>_type<0> = [Gfx,253,45,48]; @symbol_param<0>_type<1> = [Dc,253,49,51]; @symbol_param<1> = [cx,253,53,55]; @symbol_param<2> = [cy,253,57,59]; @symbol_param<3> = [now,253,61,64]; ]
+    private
+    function drawReactiveRings(dc as Gfx.Dc, cx, cy, now) as Void {
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_253_74_280_4_start:
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 254 8 ]
+        [ "C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_253_74_280_4_start" "C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_253_74_280_4_stop" ]
+        %anomaly.1 = local;
+        symbol [ anomaly %anomaly.1 254 12 19 ];
+        symbol [ _delegate %tmp.2 254 22 31 ];
+        %tmp.2 = getv ? :_delegate;
+        symbol [ isAnomaly %tmp.3 254 32 41 ];
+        %tmp.3 = getv function %tmp.2 :isAnomaly;
+        %tmp.4 = invoke %tmp.2 %tmp.3();
+        lputv %anomaly.1 %tmp.4;
+        symbol [ anomaly %anomaly.1 254 12 19 ];
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 255 8 ]
+        [ "C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_253_74_280_4_start" "C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_253_74_280_4_stop" ]
+        %level.2 = local;
+        symbol [ level %level.2 255 12 17 ];
+        symbol [ _delegate %tmp.6 255 20 29 ];
+        %tmp.6 = getv ? :_delegate;
+        symbol [ getLevel %tmp.7 255 30 38 ];
+        %tmp.7 = getv function %tmp.6 :getLevel;
+        %tmp.8 = invoke %tmp.6 %tmp.7();
+        lputv %level.2 %tmp.8;
+        symbol [ level %level.2 255 12 17 ];
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 257 8 ]
+        [ "C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_253_74_280_4_start" "C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_253_74_280_4_stop" ]
+        %period.3 = local;
+        symbol [ period %period.3 257 12 18 ];
+        %tmp.9 = 1800;
+        lputv %period.3 %tmp.9;
+        symbol [ period %period.3 257 12 18 ];
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 258 8 ]
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_258_8_263_8_if_stmt:
+        %tmp.10 = lgetv %anomaly.1;
+        symbol [ anomaly %tmp.10 258 12 19 ];
+        bf %tmp.10 @C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_258_8_263_8_if_end;
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_258_8_263_8_if_true:
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_258_21_263_8_start:
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 259 12 ]
+        %tmp.11 = 760;
+        %tmp.12 = lgetv %level.2;
+        symbol [ level %tmp.12 259 27 32 ];
+        %tmp.13 = 35;
+        %tmp.14 = mul %tmp.12 %tmp.13;
+        %tmp.15 = sub %tmp.11 %tmp.14;
+        lputv %period.3 %tmp.15;
+        symbol [ period %period.3 259 12 18 ];
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 260 12 ]
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_260_12_262_12_if_stmt:
+        %tmp.16 = lgetv %period.3;
+        symbol [ period %tmp.16 260 16 22 ];
+        %tmp.17 = 480;
+        %tmp.18 = lt %tmp.16 %tmp.17;
+        bf %tmp.18 @C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_260_12_262_12_if_end;
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_260_12_262_12_if_true:
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_260_30_262_12_start:
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 261 16 ]
+        %tmp.19 = 480;
+        lputv %period.3 %tmp.19;
+        symbol [ period %period.3 261 16 22 ];
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_260_30_262_12_stop:
+        goto @C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_260_12_262_12_if_end;
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_260_12_262_12_if_end:
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_258_21_263_8_stop:
+        goto @C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_258_8_263_8_if_end;
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_258_8_263_8_if_end:
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 265 8 ]
+        [ "C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_253_74_280_4_start" "C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_253_74_280_4_stop" ]
+        %phase.4 = local;
+        symbol [ phase %phase.4 265 12 17 ];
+        %tmp.20 = lgetv %now;
+        symbol [ now %tmp.20 265 22 25 ];
+        %tmp.21 = lgetv %period.3;
+        symbol [ period %tmp.21 265 28 34 ];
+        %tmp.22 = mod %tmp.20 %tmp.21;
+        symbol [ toFloat %tmp.23 265 36 43 ];
+        %tmp.23 = getv function %tmp.22 :toFloat;
+        %tmp.24 = invoke %tmp.22 %tmp.23();
+        %tmp.25 = lgetv %period.3;
+        symbol [ period %tmp.25 265 49 55 ];
+        symbol [ toFloat %tmp.26 265 56 63 ];
+        %tmp.26 = getv function %tmp.25 :toFloat;
+        %tmp.27 = invoke %tmp.25 %tmp.26();
+        %tmp.28 = div %tmp.24 %tmp.27;
+        lputv %phase.4 %tmp.28;
+        symbol [ phase %phase.4 265 12 17 ];
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 267 8 ]
+        for @C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_267_8_279_8_for_test @C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_267_8_279_8_for_incr @C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_267_8_279_8_for_end;
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_267_8_279_8_for_init:
+        [ "C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_267_8_279_8_for_begin" "C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_267_8_279_8_for_end" ]
+        %i.5 = local;
+        symbol [ i %i.5 267 17 18 ];
+        %tmp.29 = 0;
+        lputv %i.5 %tmp.29;
+        symbol [ i %i.5 267 17 18 ];
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_267_8_279_8_for_test:
+        %tmp.30 = lgetv %i.5;
+        symbol [ i %tmp.30 267 24 25 ];
+        %tmp.31 = 2;
+        %tmp.32 = lt %tmp.30 %tmp.31;
+        bf %tmp.32 @C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_267_8_279_8_for_end;
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_267_8_279_8_for_begin:
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_267_39_279_8_start:
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 268 12 ]
+        [ "C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_267_39_279_8_start" "C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_267_39_279_8_stop" ]
+        %p.6 = local;
+        symbol [ p %p.6 268 16 17 ];
+        %tmp.33 = lgetv %phase.4;
+        symbol [ phase %tmp.33 268 20 25 ];
+        %tmp.34 = lgetv %i.5;
+        symbol [ i %tmp.34 268 28 29 ];
+        %tmp.35 = 0.5;
+        %tmp.36 = mul %tmp.34 %tmp.35;
+        %tmp.37 = add %tmp.33 %tmp.36;
+        lputv %p.6 %tmp.37;
+        symbol [ p %p.6 268 16 17 ];
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 269 12 ]
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_269_12_271_12_if_stmt:
+        %tmp.38 = lgetv %p.6;
+        symbol [ p %tmp.38 269 16 17 ];
+        %tmp.39 = 1.0;
+        %tmp.40 = gte %tmp.38 %tmp.39;
+        bf %tmp.40 @C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_269_12_271_12_if_end;
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_269_12_271_12_if_true:
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_269_26_271_12_start:
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 270 16 ]
+        %tmp.41 = lgetv %p.6;
+        symbol [ p %tmp.41 270 16 17 ];
+        %tmp.42 = 1.0;
+        %tmp.43 = sub %tmp.41 %tmp.42;
+        lputv %p.6 %tmp.43;
+        symbol [ p %p.6 270 16 17 ];
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_269_26_271_12_stop:
+        goto @C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_269_12_271_12_if_end;
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_269_12_271_12_if_end:
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 273 12 ]
+        [ "C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_267_39_279_8_start" "C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_267_39_279_8_stop" ]
+        %radius.7 = local;
+        symbol [ radius %radius.7 273 16 22 ];
+        %tmp.44 = 118.0;
+        %tmp.45 = 27.0;
+        %tmp.46 = lgetv %p.6;
+        symbol [ p %tmp.46 273 41 42 ];
+        %tmp.47 = mul %tmp.45 %tmp.46;
+        %tmp.48 = add %tmp.44 %tmp.47;
+        symbol [ toNumber %tmp.49 273 44 52 ];
+        %tmp.49 = getv function %tmp.48 :toNumber;
+        %tmp.50 = invoke %tmp.48 %tmp.49();
+        lputv %radius.7 %tmp.50;
+        symbol [ radius %radius.7 273 16 22 ];
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 274 12 ]
+        [ "C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_267_39_279_8_start" "C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_267_39_279_8_stop" ]
+        %color.8 = local;
+        symbol [ color %color.8 274 16 21 ];
+        %tmp.51 = self;
+        symbol [ ringColor %tmp.52 274 24 33 ];
+        %tmp.52 = getv function %tmp.51 :ringColor;
+        %tmp.53 = lgetv %p.6;
+        symbol [ p %tmp.53 274 34 35 ];
+        %tmp.54 = lgetv %anomaly.1;
+        symbol [ anomaly %tmp.54 274 37 44 ];
+        %tmp.55 = lgetv %level.2;
+        symbol [ level %tmp.55 274 46 51 ];
+        %tmp.56 = invoke %tmp.51 %tmp.52(%tmp.53, %tmp.54, %tmp.55);
+        lputv %color.8 %tmp.56;
+        symbol [ color %color.8 274 16 21 ];
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 276 12 ]
+        %tmp.57 = lgetv %dc;
+        symbol [ dc %tmp.57 276 12 14 ];
+        symbol [ setColor %tmp.58 276 15 23 ];
+        %tmp.58 = getv function %tmp.57 :setColor;
+        %tmp.59 = lgetv %color.8;
+        symbol [ color %tmp.59 276 24 29 ];
+        symbol [ _colorBg %tmp.61 276 31 39 ];
+        %tmp.61 = getv ? :_colorBg;
+        invoke %tmp.57 %tmp.58(%tmp.59, %tmp.61);
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 277 12 ]
+        %tmp.62 = lgetv %dc;
+        symbol [ dc %tmp.62 277 12 14 ];
+        symbol [ setPenWidth %tmp.63 277 15 26 ];
+        %tmp.63 = getv function %tmp.62 :setPenWidth;
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_277_27_277_41_begin:
+        %tmp.64 = lgetv %anomaly.1;
+        symbol [ anomaly %tmp.64 277 27 34 ];
+        bf %tmp.64 @C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_277_27_277_41_else_false;
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_277_27_277_41_true:
+        %tmp.65 = 2;
+        push %tmp.65;
+        goto @C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_277_27_277_41_end;
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_277_27_277_41_else_false:
+        %tmp.66 = 1;
+        push %tmp.66;
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_277_27_277_41_end:
+        %tmp.67 = phi [%tmp.64 @C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_277_27_277_41_begin] [%tmp.65 @C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_277_27_277_41_true] [%tmp.66 @C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_277_27_277_41_else_false] [%tmp.67 @C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_277_27_277_41_end];
+        invoke %tmp.62 %tmp.63(%tmp.67);
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 278 12 ]
+        %tmp.68 = self;
+        symbol [ drawGaugeArc %tmp.69 278 12 24 ];
+        %tmp.69 = getv function %tmp.68 :drawGaugeArc;
+        %tmp.70 = lgetv %dc;
+        symbol [ dc %tmp.70 278 25 27 ];
+        %tmp.71 = lgetv %cx;
+        symbol [ cx %tmp.71 278 29 31 ];
+        %tmp.72 = lgetv %cy;
+        symbol [ cy %tmp.72 278 33 35 ];
+        %tmp.73 = lgetv %radius.7;
+        symbol [ radius %tmp.73 278 37 43 ];
+        %tmp.74 = 1.0;
+        invoke %tmp.68 %tmp.69(%tmp.70, %tmp.71, %tmp.72, %tmp.73, %tmp.74);
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_267_39_279_8_stop:
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_267_8_279_8_for_incr:
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 267 ]
+        %tmp.75 = lgetv %i.5;
+        symbol [ i %tmp.75 267 31 32 ];
+        %tmp.76 = 1;
+        %tmp.77 = add %tmp.75 %tmp.76;
+        lputv %i.5 %tmp.77;
+        symbol [ i %i.5 267 31 32 ];
+        goto @C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_267_8_279_8_for_test;
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_267_8_279_8_for_end:
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_253_74_280_4_stop:
+    }
+    [ @file = "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc"; @line = 282; @symbol_functiondef = [ringColor,282,21,30]; @symbol_param<0> = [phase,282,31,36]; @symbol_param<0>_type<0> = [Lang,282,40,44]; @symbol_param<0>_type<1> = [Float,282,45,50]; @symbol_param<1> = [anomaly,282,52,59]; @symbol_param<1>_type<0> = [Lang,282,63,67]; @symbol_param<1>_type<1> = [Boolean,282,68,75]; @symbol_param<2> = [level,282,77,82]; @symbol_param<2>_type<0> = [Lang,282,86,90]; @symbol_param<2>_type<1> = [Number,282,91,97]; ]
+    private
+    function ringColor(phase as Lang.Float, anomaly as Lang.Boolean, level as Lang.Number) {
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_282_99_307_4_start:
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 283 8 ]
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_283_8_299_8_if_stmt:
+        %tmp.1 = lgetv %anomaly;
+        symbol [ anomaly %tmp.1 283 12 19 ];
+        bf %tmp.1 @C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_283_8_299_8_if_end;
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_283_8_299_8_if_true:
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_283_21_299_8_start:
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 284 12 ]
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_284_12_291_12_if_stmt:
+        %tmp.2 = lgetv %level;
+        symbol [ level %tmp.2 284 16 21 ];
+        %tmp.3 = 5;
+        %tmp.4 = gte %tmp.2 %tmp.3;
+        bf %tmp.4 @C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_284_12_291_12_if_end;
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_284_12_291_12_if_true:
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_284_28_291_12_start:
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 285 16 ]
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_285_16_289_16_if_stmt:
+        %tmp.5 = lgetv %phase;
+        symbol [ phase %tmp.5 285 20 25 ];
+        %tmp.6 = 0.34;
+        %tmp.7 = lt %tmp.5 %tmp.6;
+        bf %tmp.7 @C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_285_16_289_16_if_false;
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_285_16_289_16_if_true:
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_285_34_287_16_start:
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 286 20 ]
+        symbol [ _colorRedMid %tmp.9 286 27 39 ];
+        %tmp.9 = getv ? :_colorRedMid;
+        ret %tmp.9;
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_285_34_287_16_stop:
+        goto @C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_285_16_289_16_if_end;
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_285_16_289_16_if_false:
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 287 23 ]
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_287_23_289_16_if_stmt:
+        %tmp.10 = lgetv %phase;
+        symbol [ phase %tmp.10 287 27 32 ];
+        %tmp.11 = 0.67;
+        %tmp.12 = lt %tmp.10 %tmp.11;
+        bf %tmp.12 @C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_287_23_289_16_if_end;
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_287_23_289_16_if_true:
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_287_41_289_16_start:
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 288 20 ]
+        symbol [ _colorRedDim %tmp.14 288 27 39 ];
+        %tmp.14 = getv ? :_colorRedDim;
+        ret %tmp.14;
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_287_41_289_16_stop:
+        goto @C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_287_23_289_16_if_end;
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_287_23_289_16_if_end:
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_285_16_289_16_if_end:
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 290 16 ]
+        symbol [ _colorEdge %tmp.16 290 23 33 ];
+        %tmp.16 = getv ? :_colorEdge;
+        ret %tmp.16;
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_284_28_291_12_stop:
+        goto @C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_284_12_291_12_if_end;
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_284_12_291_12_if_end:
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 293 12 ]
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_293_12_297_12_if_stmt:
+        %tmp.17 = lgetv %phase;
+        symbol [ phase %tmp.17 293 16 21 ];
+        %tmp.18 = 0.34;
+        %tmp.19 = lt %tmp.17 %tmp.18;
+        bf %tmp.19 @C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_293_12_297_12_if_false;
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_293_12_297_12_if_true:
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_293_30_295_12_start:
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 294 16 ]
+        symbol [ _colorAmberMid %tmp.21 294 23 37 ];
+        %tmp.21 = getv ? :_colorAmberMid;
+        ret %tmp.21;
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_293_30_295_12_stop:
+        goto @C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_293_12_297_12_if_end;
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_293_12_297_12_if_false:
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 295 19 ]
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_295_19_297_12_if_stmt:
+        %tmp.22 = lgetv %phase;
+        symbol [ phase %tmp.22 295 23 28 ];
+        %tmp.23 = 0.67;
+        %tmp.24 = lt %tmp.22 %tmp.23;
+        bf %tmp.24 @C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_295_19_297_12_if_end;
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_295_19_297_12_if_true:
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_295_37_297_12_start:
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 296 16 ]
+        symbol [ _colorAmberDim %tmp.26 296 23 37 ];
+        %tmp.26 = getv ? :_colorAmberDim;
+        ret %tmp.26;
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_295_37_297_12_stop:
+        goto @C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_295_19_297_12_if_end;
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_295_19_297_12_if_end:
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_293_12_297_12_if_end:
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 298 12 ]
+        symbol [ _colorEdge %tmp.28 298 19 29 ];
+        %tmp.28 = getv ? :_colorEdge;
+        ret %tmp.28;
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_283_21_299_8_stop:
+        goto @C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_283_8_299_8_if_end;
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_283_8_299_8_if_end:
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 301 8 ]
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_301_8_305_8_if_stmt:
+        %tmp.29 = lgetv %phase;
+        symbol [ phase %tmp.29 301 12 17 ];
+        %tmp.30 = 0.34;
+        %tmp.31 = lt %tmp.29 %tmp.30;
+        bf %tmp.31 @C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_301_8_305_8_if_false;
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_301_8_305_8_if_true:
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_301_26_303_8_start:
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 302 12 ]
+        symbol [ _colorCyanMid %tmp.33 302 19 32 ];
+        %tmp.33 = getv ? :_colorCyanMid;
+        ret %tmp.33;
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_301_26_303_8_stop:
+        goto @C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_301_8_305_8_if_end;
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_301_8_305_8_if_false:
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 303 15 ]
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_303_15_305_8_if_stmt:
+        %tmp.34 = lgetv %phase;
+        symbol [ phase %tmp.34 303 19 24 ];
+        %tmp.35 = 0.67;
+        %tmp.36 = lt %tmp.34 %tmp.35;
+        bf %tmp.36 @C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_303_15_305_8_if_end;
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_303_15_305_8_if_true:
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_303_33_305_8_start:
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 304 12 ]
+        symbol [ _colorCyanDim %tmp.38 304 19 32 ];
+        %tmp.38 = getv ? :_colorCyanDim;
+        ret %tmp.38;
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_303_33_305_8_stop:
+        goto @C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_303_15_305_8_if_end;
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_303_15_305_8_if_end:
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_301_8_305_8_if_end:
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 306 8 ]
+        symbol [ _colorEdge %tmp.40 306 15 25 ];
+        %tmp.40 = getv ? :_colorEdge;
+        ret %tmp.40;
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_282_99_307_4_stop:
+    }
+    [ @file = "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc"; @line = 312; @symbol_functiondef = [drawGauge,312,21,30]; @symbol_param<0> = [dc,312,31,33]; @symbol_param<0>_type<0> = [Gfx,312,37,40]; @symbol_param<0>_type<1> = [Dc,312,41,43]; @symbol_param<1> = [cx,312,45,47]; @symbol_param<2> = [cy,312,49,51]; ]
+    private
+    function drawGauge(dc as Gfx.Dc, cx, cy) as Void {
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_312_61_328_4_start:
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 313 8 ]
+        [ "C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_312_61_328_4_start" "C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_312_61_328_4_stop" ]
+        %ratio.1 = local;
+        symbol [ ratio %ratio.1 313 12 17 ];
+        symbol [ _delegate %tmp.2 313 20 29 ];
+        %tmp.2 = getv ? :_delegate;
+        symbol [ getRatio %tmp.3 313 30 38 ];
+        %tmp.3 = getv function %tmp.2 :getRatio;
+        %tmp.4 = invoke %tmp.2 %tmp.3();
+        lputv %ratio.1 %tmp.4;
+        symbol [ ratio %ratio.1 313 12 17 ];
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 314 8 ]
+        [ "C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_312_61_328_4_start" "C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_312_61_328_4_stop" ]
+        %progress.2 = local;
+        symbol [ progress %progress.2 314 12 20 ];
+        %tmp.5 = lgetv %ratio.1;
+        symbol [ ratio %tmp.5 314 23 28 ];
+        %tmp.6 = 3.0;
+        %tmp.7 = div %tmp.5 %tmp.6;
+        lputv %progress.2 %tmp.7;
+        symbol [ progress %progress.2 314 12 20 ];
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 316 8 ]
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_316_8_318_8_if_stmt:
+        %tmp.8 = lgetv %progress.2;
+        symbol [ progress %tmp.8 316 12 20 ];
+        %tmp.9 = 0.0;
+        %tmp.10 = lte %tmp.8 %tmp.9;
+        bf %tmp.10 @C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_316_8_318_8_if_end;
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_316_8_318_8_if_true:
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_316_29_318_8_start:
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 317 12 ]
+        ret ?;
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_316_29_318_8_stop:
+        goto @C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_316_8_318_8_if_end;
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_316_8_318_8_if_end:
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 319 8 ]
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_319_8_321_8_if_stmt:
+        %tmp.11 = lgetv %progress.2;
+        symbol [ progress %tmp.11 319 12 20 ];
+        %tmp.12 = 1.0;
+        %tmp.13 = gt %tmp.11 %tmp.12;
+        bf %tmp.13 @C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_319_8_321_8_if_end;
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_319_8_321_8_if_true:
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_319_28_321_8_start:
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 320 12 ]
+        %tmp.14 = 1.0;
+        lputv %progress.2 %tmp.14;
+        symbol [ progress %progress.2 320 12 20 ];
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_319_28_321_8_stop:
+        goto @C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_319_8_321_8_if_end;
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_319_8_321_8_if_end:
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 323 8 ]
+        [ "C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_312_61_328_4_start" "C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_312_61_328_4_stop" ]
+        %color.3 = local;
+        symbol [ color %color.3 323 12 17 ];
+        %tmp.15 = self;
+        symbol [ activeColor %tmp.16 323 20 31 ];
+        %tmp.16 = getv function %tmp.15 :activeColor;
+        %tmp.17 = invoke %tmp.15 %tmp.16();
+        lputv %color.3 %tmp.17;
+        symbol [ color %color.3 323 12 17 ];
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 324 8 ]
+        %tmp.18 = lgetv %dc;
+        symbol [ dc %tmp.18 324 8 10 ];
+        symbol [ setColor %tmp.19 324 11 19 ];
+        %tmp.19 = getv function %tmp.18 :setColor;
+        %tmp.20 = lgetv %color.3;
+        symbol [ color %tmp.20 324 20 25 ];
+        symbol [ _colorBg %tmp.22 324 27 35 ];
+        %tmp.22 = getv ? :_colorBg;
+        invoke %tmp.18 %tmp.19(%tmp.20, %tmp.22);
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 325 8 ]
+        %tmp.23 = lgetv %dc;
+        symbol [ dc %tmp.23 325 8 10 ];
+        symbol [ setPenWidth %tmp.24 325 11 22 ];
+        %tmp.24 = getv function %tmp.23 :setPenWidth;
+        %tmp.25 = 8;
+        invoke %tmp.23 %tmp.24(%tmp.25);
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 326 8 ]
+        %tmp.26 = self;
+        symbol [ drawGaugeArc %tmp.27 326 8 20 ];
+        %tmp.27 = getv function %tmp.26 :drawGaugeArc;
+        %tmp.28 = lgetv %dc;
+        symbol [ dc %tmp.28 326 21 23 ];
+        %tmp.29 = lgetv %cx;
+        symbol [ cx %tmp.29 326 25 27 ];
+        %tmp.30 = lgetv %cy;
+        symbol [ cy %tmp.30 326 29 31 ];
+        %tmp.31 = 158;
+        %tmp.32 = lgetv %progress.2;
+        symbol [ progress %tmp.32 326 38 46 ];
+        invoke %tmp.26 %tmp.27(%tmp.28, %tmp.29, %tmp.30, %tmp.31, %tmp.32);
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 327 8 ]
+        %tmp.33 = self;
+        symbol [ drawArcEndDot %tmp.34 327 8 21 ];
+        %tmp.34 = getv function %tmp.33 :drawArcEndDot;
+        %tmp.35 = lgetv %dc;
+        symbol [ dc %tmp.35 327 22 24 ];
+        %tmp.36 = lgetv %cx;
+        symbol [ cx %tmp.36 327 26 28 ];
+        %tmp.37 = lgetv %cy;
+        symbol [ cy %tmp.37 327 30 32 ];
+        %tmp.38 = 158;
+        %tmp.39 = lgetv %progress.2;
+        symbol [ progress %tmp.39 327 39 47 ];
+        %tmp.40 = lgetv %color.3;
+        symbol [ color %tmp.40 327 49 54 ];
+        invoke %tmp.33 %tmp.34(%tmp.35, %tmp.36, %tmp.37, %tmp.38, %tmp.39, %tmp.40);
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_312_61_328_4_stop:
+    }
+    [ @file = "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc"; @line = 335; @symbol_functiondef = [drawGaugeArc,335,21,33]; @symbol_param<0> = [dc,335,34,36]; @symbol_param<0>_type<0> = [Gfx,335,40,43]; @symbol_param<0>_type<1> = [Dc,335,44,46]; @symbol_param<1> = [cx,335,48,50]; @symbol_param<2> = [cy,335,52,54]; @symbol_param<3> = [radius,335,56,62]; @symbol_param<4> = [fraction,335,64,72]; ]
+    private
+    function drawGaugeArc(dc as Gfx.Dc, cx, cy, radius, fraction) as Void {
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_335_82_351_4_start:
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 336 8 ]
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_336_8_338_8_if_stmt:
+        %tmp.1 = lgetv %fraction;
+        symbol [ fraction %tmp.1 336 12 20 ];
+        %tmp.2 = 0.002;
+        %tmp.3 = lte %tmp.1 %tmp.2;
+        bf %tmp.3 @C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_336_8_338_8_if_end;
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_336_8_338_8_if_true:
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_336_31_338_8_start:
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 337 12 ]
+        ret ?;
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_336_31_338_8_stop:
+        goto @C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_336_8_338_8_if_end;
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_336_8_338_8_if_end:
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 339 8 ]
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_339_8_341_8_if_stmt:
+        %tmp.4 = lgetv %fraction;
+        symbol [ fraction %tmp.4 339 12 20 ];
+        %tmp.5 = 1.0;
+        %tmp.6 = gt %tmp.4 %tmp.5;
+        bf %tmp.6 @C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_339_8_341_8_if_end;
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_339_8_341_8_if_true:
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_339_28_341_8_start:
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 340 12 ]
+        %tmp.7 = 1.0;
+        lputv %fraction %tmp.7;
+        symbol [ fraction %fraction 340 12 20 ];
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_339_28_341_8_stop:
+        goto @C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_339_8_341_8_if_end;
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_339_8_341_8_if_end:
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 343 8 ]
+        [ "C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_335_82_351_4_start" "C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_335_82_351_4_stop" ]
+        %end.1 = local;
+        symbol [ end %end.1 343 12 15 ];
+        %tmp.8 = 45.0;
+        %tmp.9 = 270.0;
+        %tmp.10 = lgetv %fraction;
+        symbol [ fraction %tmp.10 343 33 41 ];
+        %tmp.11 = mul %tmp.9 %tmp.10;
+        %tmp.12 = sub %tmp.8 %tmp.11;
+        lputv %end.1 %tmp.12;
+        symbol [ end %end.1 343 12 15 ];
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 344 8 ]
+        while @C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_344_8_346_8_while_test @C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_344_8_346_8_while_end;
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_344_8_346_8_while_test:
+        %tmp.13 = lgetv %end.1;
+        symbol [ end %tmp.13 344 15 18 ];
+        %tmp.14 = 0.0;
+        %tmp.15 = lt %tmp.13 %tmp.14;
+        bf %tmp.15 @C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_344_8_346_8_while_end;
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_344_8_346_8_while_begin:
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_344_26_346_8_start:
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 345 12 ]
+        %tmp.16 = lgetv %end.1;
+        symbol [ end %tmp.16 345 12 15 ];
+        %tmp.17 = 360.0;
+        %tmp.18 = add %tmp.16 %tmp.17;
+        lputv %end.1 %tmp.18;
+        symbol [ end %end.1 345 12 15 ];
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_344_26_346_8_stop:
+        goto @C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_344_8_346_8_while_test;
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_344_8_346_8_while_end:
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 350 8 ]
+        %tmp.19 = lgetv %dc;
+        symbol [ dc %tmp.19 350 8 10 ];
+        symbol [ drawArc %tmp.20 350 11 18 ];
+        %tmp.20 = getv function %tmp.19 :drawArc;
+        %tmp.21 = lgetv %cx;
+        symbol [ cx %tmp.21 350 19 21 ];
+        %tmp.22 = lgetv %cy;
+        symbol [ cy %tmp.22 350 23 25 ];
+        %tmp.23 = lgetv %radius;
+        symbol [ radius %tmp.23 350 27 33 ];
+        symbol [ Gfx %tmp.24 350 35 38 ];
+        %tmp.24 = getm $.Toybox.Graphics;
+        symbol [ ARC_CLOCKWISE %tmp.25 350 39 52 ];
+        %tmp.25 = getv %tmp.24 :ARC_CLOCKWISE;
+        %tmp.26 = 45;
+        %tmp.27 = lgetv %end.1;
+        symbol [ end %tmp.27 350 58 61 ];
+        symbol [ toNumber %tmp.28 350 62 70 ];
+        %tmp.28 = getv function %tmp.27 :toNumber;
+        %tmp.29 = invoke %tmp.27 %tmp.28();
+        invoke %tmp.19 %tmp.20(%tmp.21, %tmp.22, %tmp.23, %tmp.25, %tmp.26, %tmp.29);
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_335_82_351_4_stop:
+    }
+    [ @file = "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc"; @line = 353; @symbol_functiondef = [drawArcEndDot,353,21,34]; @symbol_param<0> = [dc,353,35,37]; @symbol_param<0>_type<0> = [Gfx,353,41,44]; @symbol_param<0>_type<1> = [Dc,353,45,47]; @symbol_param<1> = [cx,353,49,51]; @symbol_param<2> = [cy,353,53,55]; @symbol_param<3> = [radius,353,57,63]; @symbol_param<4> = [fraction,353,65,73]; @symbol_param<5> = [color,353,75,80]; ]
+    private
+    function drawArcEndDot(dc as Gfx.Dc, cx, cy, radius, fraction, color) as Void {
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_353_90_365_4_start:
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 354 8 ]
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_354_8_356_8_if_stmt:
+        %tmp.1 = lgetv %fraction;
+        symbol [ fraction %tmp.1 354 12 20 ];
+        %tmp.2 = 0.02;
+        %tmp.3 = lte %tmp.1 %tmp.2;
+        bf %tmp.3 @C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_354_8_356_8_if_end;
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_354_8_356_8_if_true:
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_354_30_356_8_start:
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 355 12 ]
+        ret ?;
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_354_30_356_8_stop:
+        goto @C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_354_8_356_8_if_end;
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_354_8_356_8_if_end:
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 358 8 ]
+        [ "C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_353_90_365_4_start" "C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_353_90_365_4_stop" ]
+        %degrees.1 = local;
+        symbol [ degrees %degrees.1 358 12 19 ];
+        %tmp.4 = 45.0;
+        %tmp.5 = 270.0;
+        %tmp.6 = lgetv %fraction;
+        symbol [ fraction %tmp.6 358 37 45 ];
+        %tmp.7 = mul %tmp.5 %tmp.6;
+        %tmp.8 = sub %tmp.4 %tmp.7;
+        lputv %degrees.1 %tmp.8;
+        symbol [ degrees %degrees.1 358 12 19 ];
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 359 8 ]
+        [ "C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_353_90_365_4_start" "C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_353_90_365_4_stop" ]
+        %radians.2 = local;
+        symbol [ radians %radians.2 359 12 19 ];
+        %tmp.9 = lgetv %degrees.1;
+        symbol [ degrees %tmp.9 359 22 29 ];
+        symbol [ MathModule %tmp.10 359 32 42 ];
+        %tmp.10 = getm $.Toybox.Math;
+        symbol [ PI %tmp.11 359 43 45 ];
+        %tmp.11 = getv %tmp.10 :PI;
+        %tmp.12 = mul %tmp.9 %tmp.11;
+        %tmp.13 = 180.0;
+        %tmp.14 = div %tmp.12 %tmp.13;
+        lputv %radians.2 %tmp.14;
+        symbol [ radians %radians.2 359 12 19 ];
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 360 8 ]
+        [ "C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_353_90_365_4_start" "C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_353_90_365_4_stop" ]
+        %x.3 = local;
+        symbol [ x %x.3 360 12 13 ];
+        %tmp.15 = lgetv %cx;
+        symbol [ cx %tmp.15 360 17 19 ];
+        symbol [ MathModule %tmp.16 360 22 32 ];
+        %tmp.16 = getm $.Toybox.Math;
+        symbol [ cos %tmp.17 360 33 36 ];
+        %tmp.17 = getv function %tmp.16 :cos;
+        %tmp.18 = lgetv %radians.2;
+        symbol [ radians %tmp.18 360 37 44 ];
+        %tmp.19 = invoke %tmp.16 %tmp.17(%tmp.18);
+        %tmp.20 = lgetv %radius;
+        symbol [ radius %tmp.20 360 48 54 ];
+        %tmp.21 = mul %tmp.19 %tmp.20;
+        %tmp.22 = add %tmp.15 %tmp.21;
+        symbol [ toNumber %tmp.23 360 56 64 ];
+        %tmp.23 = getv function %tmp.22 :toNumber;
+        %tmp.24 = invoke %tmp.22 %tmp.23();
+        lputv %x.3 %tmp.24;
+        symbol [ x %x.3 360 12 13 ];
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 361 8 ]
+        [ "C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_353_90_365_4_start" "C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_353_90_365_4_stop" ]
+        %y.4 = local;
+        symbol [ y %y.4 361 12 13 ];
+        %tmp.25 = lgetv %cy;
+        symbol [ cy %tmp.25 361 17 19 ];
+        symbol [ MathModule %tmp.26 361 22 32 ];
+        %tmp.26 = getm $.Toybox.Math;
+        symbol [ sin %tmp.27 361 33 36 ];
+        %tmp.27 = getv function %tmp.26 :sin;
+        %tmp.28 = lgetv %radians.2;
+        symbol [ radians %tmp.28 361 37 44 ];
+        %tmp.29 = invoke %tmp.26 %tmp.27(%tmp.28);
+        %tmp.30 = lgetv %radius;
+        symbol [ radius %tmp.30 361 48 54 ];
+        %tmp.31 = mul %tmp.29 %tmp.30;
+        %tmp.32 = sub %tmp.25 %tmp.31;
+        symbol [ toNumber %tmp.33 361 56 64 ];
+        %tmp.33 = getv function %tmp.32 :toNumber;
+        %tmp.34 = invoke %tmp.32 %tmp.33();
+        lputv %y.4 %tmp.34;
+        symbol [ y %y.4 361 12 13 ];
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 363 8 ]
+        %tmp.35 = lgetv %dc;
+        symbol [ dc %tmp.35 363 8 10 ];
+        symbol [ setColor %tmp.36 363 11 19 ];
+        %tmp.36 = getv function %tmp.35 :setColor;
+        %tmp.37 = lgetv %color;
+        symbol [ color %tmp.37 363 20 25 ];
+        symbol [ _colorBg %tmp.39 363 27 35 ];
+        %tmp.39 = getv ? :_colorBg;
+        invoke %tmp.35 %tmp.36(%tmp.37, %tmp.39);
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 364 8 ]
+        %tmp.40 = lgetv %dc;
+        symbol [ dc %tmp.40 364 8 10 ];
+        symbol [ fillCircle %tmp.41 364 11 21 ];
+        %tmp.41 = getv function %tmp.40 :fillCircle;
+        %tmp.42 = lgetv %x.3;
+        symbol [ x %tmp.42 364 22 23 ];
+        %tmp.43 = lgetv %y.4;
+        symbol [ y %tmp.43 364 25 26 ];
+        %tmp.44 = 6;
+        invoke %tmp.40 %tmp.41(%tmp.42, %tmp.43, %tmp.44);
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_353_90_365_4_stop:
+    }
+    [ @file = "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc"; @line = 370; @symbol_functiondef = [drawTitle,370,21,30]; @symbol_param<0> = [dc,370,31,33]; @symbol_param<0>_type<0> = [Gfx,370,37,40]; @symbol_param<0>_type<1> = [Dc,370,41,43]; @symbol_param<1> = [cx,370,45,47]; ]
+    private
+    function drawTitle(dc as Gfx.Dc, cx) as Void {
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_370_57_373_4_start:
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 371 8 ]
+        %tmp.1 = lgetv %dc;
+        symbol [ dc %tmp.1 371 8 10 ];
+        symbol [ setColor %tmp.2 371 11 19 ];
+        %tmp.2 = getv function %tmp.1 :setColor;
+        symbol [ _colorDim %tmp.4 371 20 29 ];
+        %tmp.4 = getv ? :_colorDim;
+        symbol [ _colorBg %tmp.6 371 31 39 ];
+        %tmp.6 = getv ? :_colorBg;
+        invoke %tmp.1 %tmp.2(%tmp.4, %tmp.6);
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 372 8 ]
+        %tmp.7 = lgetv %dc;
+        symbol [ dc %tmp.7 372 8 10 ];
+        symbol [ drawText %tmp.8 372 11 19 ];
+        %tmp.8 = getv function %tmp.7 :drawText;
+        %tmp.9 = lgetv %cx;
+        symbol [ cx %tmp.9 372 20 22 ];
+        %tmp.10 = 52;
+        symbol [ Gfx %tmp.11 372 28 31 ];
+        %tmp.11 = getm $.Toybox.Graphics;
+        symbol [ FONT_XTINY %tmp.12 372 32 42 ];
+        %tmp.12 = getv %tmp.11 :FONT_XTINY;
+        %tmp.13 = "WALL SENSE";
+        %tmp.14 = self;
+        symbol [ centered %tmp.15 372 58 66 ];
+        %tmp.15 = getv function %tmp.14 :centered;
+        %tmp.16 = invoke %tmp.14 %tmp.15();
+        invoke %tmp.7 %tmp.8(%tmp.9, %tmp.10, %tmp.12, %tmp.13, %tmp.16);
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_370_57_373_4_stop:
+    }
+    [ @file = "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc"; @line = 375; @symbol_functiondef = [activeColor,375,21,32]; ]
+    private
+    function activeColor() {
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_375_35_385_4_start:
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 376 8 ]
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_376_8_378_8_if_stmt:
+        symbol [ _delegate %tmp.2 376 13 22 ];
+        %tmp.2 = getv ? :_delegate;
+        symbol [ isAnomaly %tmp.3 376 23 32 ];
+        %tmp.3 = getv function %tmp.2 :isAnomaly;
+        %tmp.4 = invoke %tmp.2 %tmp.3();
+        %tmp.5 = not %tmp.4;
+        bf %tmp.5 @C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_376_8_378_8_if_end;
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_376_8_378_8_if_true:
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_376_36_378_8_start:
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 377 12 ]
+        symbol [ _colorCyan %tmp.7 377 19 29 ];
+        %tmp.7 = getv ? :_colorCyan;
+        ret %tmp.7;
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_376_36_378_8_stop:
+        goto @C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_376_8_378_8_if_end;
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_376_8_378_8_if_end:
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 380 8 ]
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_380_8_382_8_if_stmt:
+        symbol [ _delegate %tmp.9 380 12 21 ];
+        %tmp.9 = getv ? :_delegate;
+        symbol [ getLevel %tmp.10 380 22 30 ];
+        %tmp.10 = getv function %tmp.9 :getLevel;
+        %tmp.11 = invoke %tmp.9 %tmp.10();
+        %tmp.12 = 5;
+        %tmp.13 = gte %tmp.11 %tmp.12;
+        bf %tmp.13 @C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_380_8_382_8_if_end;
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_380_8_382_8_if_true:
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_380_39_382_8_start:
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 381 12 ]
+        symbol [ _colorRed %tmp.15 381 19 28 ];
+        %tmp.15 = getv ? :_colorRed;
+        ret %tmp.15;
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_380_39_382_8_stop:
+        goto @C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_380_8_382_8_if_end;
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_380_8_382_8_if_end:
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 384 8 ]
+        symbol [ _colorAmber %tmp.17 384 15 26 ];
+        %tmp.17 = getv ? :_colorAmber;
+        ret %tmp.17;
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_375_35_385_4_stop:
+    }
+    [ @file = "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc"; @line = 387; @symbol_functiondef = [centered,387,21,29]; ]
+    private
+    function centered() {
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_387_32_389_4_start:
+[ "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc" 388 8 ]
+        symbol [ Gfx %tmp.1 388 15 18 ];
+        %tmp.1 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.2 388 19 38 ];
+        %tmp.2 = getv %tmp.1 :TEXT_JUSTIFY_CENTER;
+        symbol [ Gfx %tmp.3 388 41 44 ];
+        %tmp.3 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_VCENTER %tmp.4 388 45 65 ];
+        %tmp.4 = getv %tmp.3 :TEXT_JUSTIFY_VCENTER;
+        %tmp.5 = bitor %tmp.2 %tmp.4;
+        ret %tmp.5;
+C__Users_ASUS_Documents_diseño_de_interfaces_tareas_TALLERES_FINALES_smartwatch_source_View_mc_387_32_389_4_stop:
+    }
+}
+[ @file = "C:\Users\ASUS\Documents\diseño de interfaces tareas\TALLERES FINALES\smartwatch\source\View.mc"; @line = 13; ]
+<init> {
+}
