@@ -24,14 +24,23 @@ as the deviation grows.
   batch window; every sample inside the batch is still processed. A 25 Hz
   registration is retried if the firmware rejects the maximum rate. A 50 ms
   timer drives the display animation and the haptic sequencer.
-- 3-second baseline calibration using Welford online mean/variance.
-- Adaptive anomaly threshold based on measured ambient noise:
-  `4 * sigma + 1.5 mG`, clamped to **2..30 mG**.
-- Detection uses `delta = abs(sqrt(x*x + y*y + z*z) - baseline)`.
-- Entry requires two consecutive samples above the threshold; release uses 35%
-  hysteresis to prevent chatter.
+- 0.7-second settle delay, then a 3-second baseline calibration using Welford
+  online mean/variance. Calibration restarts if the hand moves.
+- Adaptive anomaly threshold relative to the ambient field:
+  `4 * sigma + 1% of ambient`, never below **2.5% of ambient** (~12 mG).
+- Two detectors combined into one score:
+  - steady change: `delta = abs(sqrt(x*x + y*y + z*z) - baseline)`;
+  - AC ripple from live cables: RMS of the high-passed magnitude, threshold
+    3x the quiet-room ripple (at least 0.4% of ambient, ~2 mG).
+- Entry requires ~0.15 s above the threshold; release requires ~0.5 s under
+  65% of it.
+- Samples taken while the vibration motor runs are ignored, so the motor's
+  magnet cannot trigger detections by itself.
+- The accelerometer detects wrist tilt (>15 degrees) and the baseline is
+  re-learned automatically once the hand is steady again.
+- While nothing is detected, the baseline slowly tracks drift (~20 s).
 - Dynamic haptics with eight cached `Attention.VibeProfile` patterns:
-  - repetition interval: **720 ms -> 320 ms** as the anomaly grows;
+  - repetition interval: **1000 ms -> 600 ms** as the anomaly grows;
   - pulse envelope: **50 ms -> 150 ms**;
   - duty cycle: **35% -> 100%** (mapped for API completeness);
   - levels 4-7 split the envelope into a main pulse plus a shorter echo,
@@ -108,19 +117,22 @@ for example:
 
 1. Launch **Wall Sense** from the watch's Connect IQ app list.
 2. During **CALIBRATING**, hold the watch still and keep it away from metal,
-   magnets, speakers, motors, chargers and energized wiring for 3 seconds.
+   magnets, speakers, motors, chargers and energized wiring for about 4
+   seconds, until the double confirmation vibration.
    The gauge fills and the percentage counts up.
 3. After calibration, the app scans continuously. The display shows:
    - **SCANNING** in normal conditions;
    - **ANOMALY** when the field deviates past the adaptive threshold;
    - **STRONG SIGNAL** at the highest levels;
    - **SENSOR LOST** with automatic retries if magnetometer data stops.
-4. Move the watch slowly toward the object being checked. A local magnetic
-   distortion raises the numeric delta and changes the gauge color from cyan to
-   amber/red.
+4. To find cables, keep the watch flat against the wall, a few centimetres
+   away, and slide it slowly sideways without turning the wrist. A local
+   magnetic distortion or a live cable raises the gauge and changes its color
+   from cyan to amber/red. Cables are only detectable while current flows
+   through them (switch on a light or appliance on that circuit).
 5. **Tap the screen**, or press **ENTER/START**, to recalibrate at any time.
-   Recalibrate whenever you change location or significantly change the watch's
-   orientation.
+   Turning the wrist re-learns the baseline automatically; a full recalibration
+   is only needed when you move to another room.
 
 ### Reading the display
 
@@ -128,7 +140,8 @@ for example:
   (mG).
 - **mG**: unit label.
 - **TH x.x**: adaptive anomaly threshold calculated during calibration.
-- **Gauge**: `delta / threshold` on a scale that reaches full at roughly
+- **Gauge**: combined score (the larger of `delta / threshold` and
+  `ripple / ripple threshold`) on a scale that reaches full at roughly
   `3 x threshold`.
 - **Rings**: slow ambient echoes while scanning; they speed up and brighten as
   the anomaly level rises.
@@ -147,8 +160,19 @@ delta     = abs(magnitude - baseline)
 
 The baseline is the mean magnitude observed during the 3-second calibration.
 The threshold is derived from the standard deviation of those calibration
-samples, so a quiet environment gets a sensitive threshold and a noisy one gets
-a wider margin.
+samples plus a share of the ambient field, so a noisy environment gets a wider
+margin but a quiet one never gets a hair-trigger threshold.
+
+Live cables are detected separately. Mains current alternates at 50/60 Hz;
+sampled at ~25 Hz it aliases into a fast fluctuation of the magnitude even
+when the average barely changes. The app subtracts a ~0.3 s running mean and
+tracks the RMS of what remains:
+
+```text
+residual = magnitude - running_mean
+ripple   = sqrt(running_mean(residual^2))
+score    = max(delta / threshold, ripple / ripple_threshold)
+```
 
 This means the app reacts to changes in the **total field strength**, not to a
 particular direction. A nearby ferromagnetic object (iron, steel, nickel, some
@@ -170,16 +194,17 @@ Eight levels are cached at startup (`n = level / 7`):
 
 | Level | Interval | Main pulse | Echo | Gap | Duty | Pattern |
 |------:|---------:|-----------:|-----:|----:|-----:|---------|
-| 0 | 720 ms | 50 ms | — | — | 35% | single |
-| 1 | 643 ms | 64 ms | — | — | 44% | single |
-| 2 | 582 ms | 78 ms | — | — | 53% | single |
-| 3 | 525 ms | 92 ms | — | — | 62% | single |
-| 4 | 471 ms | 66 ms | 36 ms | 30 ms | 72% | double |
-| 5 | 419 ms | 75 ms | 41 ms | 30 ms | 81% | double |
-| 6 | 369 ms | 83 ms | 45 ms | 30 ms | 90% | double |
-| 7 | 320 ms | 93 ms | 51 ms | 30 ms | 100% | double |
+| 0 | 1000 ms | 50 ms | — | — | 35% | single |
+| 1 | 923 ms | 64 ms | — | — | 44% | single |
+| 2 | 862 ms | 78 ms | — | — | 53% | single |
+| 3 | 805 ms | 92 ms | — | — | 62% | single |
+| 4 | 751 ms | 66 ms | 36 ms | 30 ms | 72% | double |
+| 5 | 699 ms | 75 ms | 41 ms | 30 ms | 81% | double |
+| 6 | 649 ms | 83 ms | 45 ms | 30 ms | 90% | double |
+| 7 | 600 ms | 93 ms | 51 ms | 30 ms | 100% | double |
 
-The interval formula is `720 - 400 * n^0.85` ms. The pulse envelope is
+The interval formula is `1000 - 400 * n^0.85` ms, kept long enough to leave
+motor-off samples between pulses. The pulse envelope is
 `50 + 100 * n` ms; levels 4-7 use 62% of that envelope for the main pulse and
 34% for the echo. All values in the table are the truncated integers actually
 cached by the app. Higher levels therefore pulse faster, longer and with a more
@@ -218,11 +243,14 @@ invalid. This is why the manifest contains only `Sensor`.
 
 - **Magnitude, not direction.** The app compares total field strength. Rotating
   the watch can change the reading slightly because real sensors have hard-iron
-  offsets; this can look like an anomaly. Keep the watch orientation stable, or
-  recalibrate after turning the wrist.
+  offsets. Tilting is detected with the accelerometer and the baseline is
+  re-learned, but turning the watch flat (around the vertical axis) is not
+  seen by the accelerometer, so keep that orientation stable while scanning.
 - **Ferromagnetic metals only.** Copper, aluminium, brass, gold and most
   non-magnetic materials are invisible unless they carry current. A live AC
-  wire can be detected; a dead wire usually cannot.
+  wire can be detected; a dead wire usually cannot. In a two-conductor cable
+  the currents partly cancel, so the field is weak: expect a range of a few
+  centimetres, and better results with a load switched on.
 - **Distance matters.** Field strength falls quickly with distance. Detection
   range depends on the object's size, orientation and magnetic properties, and
   on the local Earth field.
@@ -244,7 +272,8 @@ invalid. This is why the manifest contains only `Sensor`.
 |---|---|
 | Stuck on CALIBRATING | Move away from metal, hold still, check that the Sensor permission was granted at install. |
 | SENSOR LOST | Tap to retry; make sure no other sensor-heavy app is running; restart the watch if it persists. |
-| Triggering with no metal nearby | Recalibrate; avoid rotating the wrist; move away from speakers, chargers and metal desks. |
+| Triggering with no metal nearby | Recalibrate; avoid rotating the wrist flat; move away from speakers, chargers and metal desks. |
+| Misses a cable | Switch on a load on that circuit, recalibrate a short distance from the wall, then slide slowly with the watch flat against it. |
 | No vibration | Confirm the app is in the foreground and that vibration is enabled on the watch. Forerunners use a fixed vibration duty cycle. |
 | Delta drifts over time | Recalibrate; ambient field and sensor offset can change with orientation and temperature. |
 
